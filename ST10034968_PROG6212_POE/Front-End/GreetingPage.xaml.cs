@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ST10034968_PROG6212_POE
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for GreetingPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GreetingPage : Window
     {
-        public MainWindow()
+        public GreetingPage()
         {
             InitializeComponent();
         }
