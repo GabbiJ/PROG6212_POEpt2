@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE"
         mc:Ignorable="d"
         Title="GreetingPage" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#2E282A">
         
     </Grid>
 </Window>
