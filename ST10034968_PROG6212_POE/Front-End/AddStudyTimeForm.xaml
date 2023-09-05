@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="AddStudyTimeForm" Height="450" Width="800">
     <Grid Background="#2E282A">
-        
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Style="{StaticResource mostProminentBtn}" Margin="411,99,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
