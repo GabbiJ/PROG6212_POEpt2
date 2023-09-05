@@ -7,12 +7,36 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Front-End\AddModuleForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Front-End\AddStudyTimeForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Front-End\GreetingPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Front-End\HomeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Front-End\SemesterInfoForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Front-End\AddModuleForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Front-End\AddStudyTimeForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Front-End\GreetingPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Front-End\HomeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Front-End\SemesterInfoForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Front-End\Styles.xaml">

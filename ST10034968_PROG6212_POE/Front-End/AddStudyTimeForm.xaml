@@ -7,7 +7,32 @@
         mc:Ignorable="d"
         Title="AddStudyTimeForm" Height="450" Width="800">
     <Grid Background="#2E282A">
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Style="{StaticResource mostProminentBtn}" Margin="411,99,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Add" HorizontalAlignment="Center" Style="{StaticResource mostProminentBtn}" Margin="0,316,0,0" VerticalAlignment="Top" />
+        <Label x:Name="lblTitle" Content="Add Study Time" HorizontalAlignment="Center" Style="{StaticResource title}" Margin="0,51,0,0" VerticalAlignment="Top">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF84A9C0" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Ellipse HorizontalAlignment="Left" Height="225" Margin="-51,-49,0,0" VerticalAlignment="Top" Width="225">
+            <Ellipse.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="135" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FF84A9C0"/>
+                    <GradientStop Color="#FFB3CBB9" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Label x:Name="label" Content="+" HorizontalAlignment="Left" Margin="51,-38,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontSize="150" FontFamily="Comic Sans MS" Height="188" Width="98"/>
 
     </Grid>
 </Window>

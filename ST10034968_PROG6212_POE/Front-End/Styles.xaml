@@ -27,4 +27,9 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style TargetType="Label" x:Key="title">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+    </Style>
 </ResourceDictionary>
