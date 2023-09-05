@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ST10034968_PROG6212_POE/1.0.0": {
+        "runtime": {
+          "ST10034968_PROG6212_POE.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ST10034968_PROG6212_POE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
