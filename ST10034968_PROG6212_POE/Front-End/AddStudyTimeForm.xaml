@@ -33,6 +33,8 @@
             </Ellipse.Fill>
         </Ellipse>
         <Label x:Name="label" Content="+" HorizontalAlignment="Left" Margin="51,-38,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontSize="150" FontFamily="Comic Sans MS" Height="188" Width="98"/>
+        <Label x:Name="label1" Content="Date completed:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="240,150,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Hours studied:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="240,217,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
