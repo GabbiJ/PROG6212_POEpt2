@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE.Front_End"
         mc:Ignorable="d"
         Title="HomeWindow" Height="450" Width="800">
-    <Grid Background="#2E282A">
-        <Ellipse HorizontalAlignment="Center" Height="246" Stroke="Black" VerticalAlignment="Top" Width="436" Margin="0,-129,0,0">
+    <Grid Background="#2E282A" Margin="0,0,0,-114">
+        <Ellipse HorizontalAlignment="Center" Height="246" Stroke="Black" VerticalAlignment="Top" Width="446" Margin="0,-129,0,0">
             <Ellipse.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -25,13 +25,36 @@
                 </LinearGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
-        <Label x:Name="lblTitle" Content="Your Current Semester" Style = "{StaticResource title}" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="#FF282224" FontSize="32"/>
-        <Label x:Name="label1" Content="Duration" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="140,140,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Label" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="140,176,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Label" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="413,198,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label4" Content="Label" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="432,249,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label5" Content="Label" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="335,291,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label6" Content="Label" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="548,291,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTitle" Content="Your Current Semester" Style = "{StaticResource title}" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="#FF282224" FontSize="35"/>
+        <Label x:Name="lblDuration" Content="Duration:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="190,140,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblStartDate" Content="Start Date:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="182,176,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDurationValue" Content="(Weeks value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="400,140,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDateValue" Content="(Date Value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="400,176,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblWeeks" Content="Weeks" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="512,140,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblModulesTitle" Content="Modules" Style = "{StaticResource title}" HorizontalAlignment="Left" Margin="105,227,0,0" VerticalAlignment="Top" FontSize="28"/>
+        <ListView x:Name="listView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,274,105,26" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5">
+            <ListView.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFD7999E"/>
+                    <GradientStop Color="#FFB3CBB9" Offset="1"/>
+                    <GradientStop Color="#FF7D55A6" Offset="0.33"/>
+                    <GradientStop Color="#FF84A9C0" Offset="0.66"/>
+                </LinearGradientBrush>
+            </ListView.BorderBrush>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
