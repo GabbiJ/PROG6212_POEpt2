@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE.Front_End"
         mc:Ignorable="d"
-        Title="HomeWindow" Height="450" Width="800">
-    <Grid Background="#2E282A" Margin="0,0,0,-114">
+        Title="HomeWindow" Height="700" Width="800">
+    <Grid Background="#2E282A" Margin="0,0,0,0">
         <Ellipse HorizontalAlignment="Center" Height="246" Stroke="Black" VerticalAlignment="Top" Width="446" Margin="0,-129,0,0">
             <Ellipse.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -32,7 +32,7 @@
         <Label x:Name="lblDateValue" Content="(Date Value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="400,176,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblWeeks" Content="Weeks" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="512,140,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblModulesTitle" Content="Modules" Style = "{StaticResource title}" HorizontalAlignment="Left" Margin="105,227,0,0" VerticalAlignment="Top" FontSize="28"/>
-        <ListView x:Name="listView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,274,105,26" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5">
+        <ListView x:Name="listView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,274,105,246" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5">
             <ListView.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -55,6 +55,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="382,492,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="672,176,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="382,599,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
