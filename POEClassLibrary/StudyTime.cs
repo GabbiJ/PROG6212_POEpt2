@@ -8,5 +8,7 @@ namespace POEClassLibrary
 {
     public class StudyTime
     {
+        public DateTime DateCompleted { get; set; }
+        public double NumOfHours { get; set; }
     }
 }
