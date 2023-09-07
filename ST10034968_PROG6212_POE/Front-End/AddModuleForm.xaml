@@ -40,5 +40,6 @@
         <TextBox x:Name="txbModCode" HorizontalAlignment="Left" Margin="434,193,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
         <TextBox x:Name="txbNumOfCredits" HorizontalAlignment="Left" Margin="434,229,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
         <TextBox x:Name="txbClassHoursPerWeek" HorizontalAlignment="Left" Margin="434,260,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Center" Style="{StaticResource mostProminentBtn}" Margin="0,308,0,0" VerticalAlignment="Top" />
     </Grid>
 </Window>

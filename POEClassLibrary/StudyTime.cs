@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POEClassLibrary
 {
-    internal class StudyTime
+    public class StudyTime
     {
     }
 }

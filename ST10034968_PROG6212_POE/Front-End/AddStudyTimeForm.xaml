@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Add Study Time" Height="375" Width="800">
     <Grid Background="#2E282A" Margin="0,0,0,-6">
-        <Button x:Name="button" Content="Add" HorizontalAlignment="Center" Style="{StaticResource mostProminentBtn}" Margin="0,283,0,0" VerticalAlignment="Top" />
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Center" Style="{StaticResource mostProminentBtn}" Margin="0,283,0,0" VerticalAlignment="Top" />
         <Label x:Name="lblTitle" Content="Add Study Time" HorizontalAlignment="Center" Style="{StaticResource title}" Margin="0,51,0,0" VerticalAlignment="Top">
             <Label.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
