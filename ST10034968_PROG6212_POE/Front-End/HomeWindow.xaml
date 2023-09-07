@@ -26,13 +26,13 @@
             </Ellipse.Fill>
         </Ellipse>
         <Label x:Name="lblTitle" Content="Your Current Semester" Style = "{StaticResource title}" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="#FF282224" FontSize="35"/>
-        <Label x:Name="lblDuration" Content="Duration:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="190,140,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblStartDate" Content="Start Date:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="182,176,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblDurationValue" Content="(Weeks value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="400,140,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblDateValue" Content="(Date Value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="400,176,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblWeeks" Content="Weeks" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="512,140,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDuration" Content="Duration:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="152,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblStartDate" Content="Start Date:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="144,177,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDurationValue" Content="(Weeks value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="362,141,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblDateValue" Content="(Date Value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="362,177,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblWeeks" Content="Weeks" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="474,141,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblModulesTitle" Content="Modules" Style = "{StaticResource title}" HorizontalAlignment="Left" Margin="105,227,0,0" VerticalAlignment="Top" FontSize="28"/>
-        <ListView x:Name="listView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,274,105,246" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5">
+        <ListView x:Name="lvModules" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,274,105,246" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5" FontSize="14">
             <ListView.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -55,9 +55,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="382,492,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="672,176,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button2" Content="Button" HorizontalAlignment="Left" Margin="382,599,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnAdd" Content="+" Style="{StaticResource defaultBtn}"  HorizontalAlignment="Center" Margin="0,443,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Padding="20,-6,20,3" Height="39" BorderBrush="#FFD7999E" BorderThickness="2,2,2,2" RenderTransformOrigin="0.531,0.501" VerticalContentAlignment="Center" Background="#FF383133"/>
+        <Button x:Name="btnEdit" Content="Edit" Style="{StaticResource defaultBtn}"  HorizontalAlignment="Left" Margin="608,162,0,0" VerticalAlignment="Top" Padding="10,2,10,2" UseLayoutRounding="True" Background="#FF383133"/>
+        <Button x:Name="btnAddStudyTime" Content="Add Study Time" Style="{StaticResource mostProminentBtn}"  HorizontalAlignment="Center" Margin="0,529,0,0" VerticalAlignment="Top" FontSize="24"/>
 
     </Grid>
 </Window>

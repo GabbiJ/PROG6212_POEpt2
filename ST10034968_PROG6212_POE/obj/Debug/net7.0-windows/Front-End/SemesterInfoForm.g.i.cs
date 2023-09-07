@@ -53,7 +53,7 @@ namespace ST10034968_PROG6212_POE.Front_End {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ST10034968_PROG6212_POE;component/front-end/semesterinfoform.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ST10034968_PROG6212_POE;V1.0.0.0;component/front-end/semesterinfoform.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Front-End\SemesterInfoForm.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
