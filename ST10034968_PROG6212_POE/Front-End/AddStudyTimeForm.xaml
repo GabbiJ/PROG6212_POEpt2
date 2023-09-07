@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE.Front_End"
         mc:Ignorable="d"
-        Title="AddStudyTimeForm" Height="375" Width="800">
+        Title="Add Study Time" Height="375" Width="800">
     <Grid Background="#2E282A" Margin="0,0,0,-6">
         <Button x:Name="button" Content="Add" HorizontalAlignment="Center" Style="{StaticResource mostProminentBtn}" Margin="0,283,0,0" VerticalAlignment="Top" />
         <Label x:Name="lblTitle" Content="Add Study Time" HorizontalAlignment="Center" Style="{StaticResource title}" Margin="0,51,0,0" VerticalAlignment="Top">

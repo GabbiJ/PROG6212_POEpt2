@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE.Front_End"
         mc:Ignorable="d"
-        Title="SemesterInfoForm" Height="450" Width="800">
-    <Grid Background="#2E282A">
-        
+        Title="Enter Current Semester Information" Height="342" Width="737">
+    <Grid Background="#2E282A" Margin="0,0,0,0">
+        <Label x:Name="label" Content="Enter Current Semester Information" Style = "{StaticResource title}"  HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAAD0B3" Offset="1"/>
+                    <GradientStop Color="White" Offset="0"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="label1" Content="This semester's start date:" Style="{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="143,127,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Number of weeks this semester:" Style="{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="99,186,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="400,134,0,0" VerticalAlignment="Top" Background="#FF2E282A" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="txbWeeks" HorizontalAlignment="Left" Style="{StaticResource defaultTxb}" Margin="400,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>

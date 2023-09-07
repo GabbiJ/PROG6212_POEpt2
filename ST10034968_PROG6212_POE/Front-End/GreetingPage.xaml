@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE"
         mc:Ignorable="d"
-        Title="GreetingPage" Height="450" Width="800">
+        Title="Lerato's Studying Organiser" Height="450" Width="800">
     <Grid Background="#2E282A">
         <Ellipse HorizontalAlignment="Left" Height="225" Margin="31,-64,0,0" VerticalAlignment="Top" Width="225">
             <Ellipse.Fill>

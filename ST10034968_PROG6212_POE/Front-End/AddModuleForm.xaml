@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE.Front_End"
         mc:Ignorable="d"
-        Title="AddModuleForm" Height="377" Width="800">
+        Title="Add Module" Height="377" Width="800">
     <Grid Background="#2E282A" Height="364" VerticalAlignment="Top">
         <Label x:Name="lblTitle" Content="Add a Module" HorizontalAlignment="Center" Style="{StaticResource title}" Margin="0,45,0,0" VerticalAlignment="Top">
             <Label.Foreground>
