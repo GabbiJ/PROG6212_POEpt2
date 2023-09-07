@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE.Front_End"
         mc:Ignorable="d"
-        Title="Lerato's Studying Organiser" Height="700" Width="800">
+        Title="Lerato's Studying Organiser" Height="633" Width="800">
     <Grid Background="#2E282A" Margin="0,0,0,0">
         <Rectangle HorizontalAlignment="Left" Height="81" Margin="135,141,0,0" Stroke="Black" VerticalAlignment="Top" Width="539" RadiusX="15" RadiusY="15">
             <Rectangle.Fill>
@@ -40,7 +40,7 @@
         <Label x:Name="lblDateValue" Content="(Date Value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="351,176,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
         <Label x:Name="lblWeeks" Content="Weeks" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="474,150,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
         <Label x:Name="lblModulesTitle" Content="Modules" Style = "{StaticResource title}" HorizontalAlignment="Left" Margin="105,227,0,0" VerticalAlignment="Top" FontSize="28"/>
-        <ListView x:Name="lvModules" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,274,105,246" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5" FontSize="14">
+        <ListView x:Name="lvModules" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,274,105,177" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5" FontSize="14">
             <ListView.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
