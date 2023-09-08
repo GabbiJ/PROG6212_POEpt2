@@ -12,5 +12,14 @@ namespace POEClassLibrary
         public string Name { get; set; }
         public int NumOfCredits { get; set; }
         public int ClassHoursPerWeek { get; set; }
+
+        public Module(string code, string name, int numOfCredits, int classHoursPerWeek)
+        {
+            Code = code;
+            Name = name;
+            NumOfCredits = numOfCredits;
+            ClassHoursPerWeek = classHoursPerWeek;
+        }
+
     }
 }
