@@ -1,0 +1,6 @@
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\POEClassLibrary\bin\Debug\POEClassLibrary.dll
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\POEClassLibrary\bin\Debug\POEClassLibrary.pdb
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\POEClassLibrary\obj\Debug\POEClassLibrary.csproj.AssemblyReference.cache
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\POEClassLibrary\obj\Debug\POEClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\POEClassLibrary\obj\Debug\POEClassLibrary.dll
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\POEClassLibrary\obj\Debug\POEClassLibrary.pdb

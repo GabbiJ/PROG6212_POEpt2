@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "ST10034968_PROG6212_POE/1.0.0": {
+        "dependencies": {
+          "POEClassLibrary": "1.0.0"
+        },
         "runtime": {
           "ST10034968_PROG6212_POE.dll": {}
+        }
+      },
+      "POEClassLibrary/1.0.0": {
+        "runtime": {
+          "POEClassLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ST10034968_PROG6212_POE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "POEClassLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

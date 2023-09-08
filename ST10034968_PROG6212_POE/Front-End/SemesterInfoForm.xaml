@@ -17,8 +17,10 @@
         </Label>
         <Label x:Name="label1" Content="This semester's start date:" Style="{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="143,127,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="Number of weeks this semester:" Style="{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="99,186,0,0" VerticalAlignment="Top"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="400,134,0,0" VerticalAlignment="Top" Background="#FF2E282A" BorderBrush="{x:Null}"/>
+        <DatePicker x:Name="dpStartDate" HorizontalAlignment="Left" Margin="400,134,0,0" VerticalAlignment="Top" Background="#FF2E282A" BorderBrush="{x:Null}"/>
         <TextBox x:Name="txbWeeks" HorizontalAlignment="Left" Style="{StaticResource defaultTxb}" Margin="400,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnEnter" Style="{StaticResource mostProminentBtn}" Content="Enter" HorizontalAlignment="Center" Margin="0,236,0,0" VerticalAlignment="Top" Click="btnEnter_Click"/>
+        <Label x:Name="lblError" HorizontalAlignment="Center" Margin="0,284,0,0" VerticalAlignment="Top" Foreground="#FFF56B6B" Width="554" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </Window>

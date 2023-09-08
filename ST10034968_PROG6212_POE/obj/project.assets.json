@@ -1,11 +1,29 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {}
+    "net7.0-windows7.0": {
+      "POEClassLibrary/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/POEClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/POEClassLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "POEClassLibrary/1.0.0": {
+      "type": "project",
+      "path": "../POEClassLibrary/POEClassLibrary.csproj",
+      "msbuildProject": "../POEClassLibrary/POEClassLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": []
+    "net7.0-windows7.0": [
+      "POEClassLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Gabbi 9\\.nuget\\packages\\": {},
@@ -39,7 +57,11 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Gabbi 9\\OneDrive - ADvTECH Ltd\\Varsity College\\Year 2\\Semester 2\\PROG6212\\POE\\POE Part 1\\ST10034968_PROG6212_POE\\POEClassLibrary\\POEClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\Gabbi 9\\OneDrive - ADvTECH Ltd\\Varsity College\\Year 2\\Semester 2\\PROG6212\\POE\\POE Part 1\\ST10034968_PROG6212_POE\\POEClassLibrary\\POEClassLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

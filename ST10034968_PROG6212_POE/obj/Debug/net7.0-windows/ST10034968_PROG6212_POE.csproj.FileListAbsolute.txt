@@ -29,3 +29,6 @@ C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG62
 C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddStudyTimeForm.baml
 C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\HomeWindow.baml
 C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\SemesterInfoForm.baml
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\POEClassLibrary.dll
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\POEClassLibrary.pdb
+C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.csproj.CopyComplete

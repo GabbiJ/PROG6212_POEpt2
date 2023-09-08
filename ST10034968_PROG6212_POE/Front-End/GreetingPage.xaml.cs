@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ST10034968_PROG6212_POE
+namespace ST10034968_PROG6212_POE.Front_End
 {
     /// <summary>
     /// Interaction logic for GreetingPage.xaml
@@ -22,6 +22,13 @@ namespace ST10034968_PROG6212_POE
         public GreetingPage()
         {
             InitializeComponent();
+        }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            SemesterInfoForm sif = new SemesterInfoForm();
+            sif.Show();
+            this.Close();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POEClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,41 @@ namespace ST10034968_PROG6212_POE.Front_End
         public SemesterInfoForm()
         {
             InitializeComponent();
+        }
+
+        private void btnEnter_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //assigning start date value
+                DateTime? startDate = dpStartDate.SelectedDate;
+                if (startDate == null)
+                {
+                    new NullReferenceException("Please select a start date.");
+                }
+                else
+                {
+                    CurrentSemester.StartDate = (DateTime)startDate;
+                }
+                //assigning number weeks value and closing window and going to home window
+                int? numOfWeeks = Convert.ToInt32(txbWeeks.Text);
+                if (numOfWeeks == null) 
+                {
+                    new NullReferenceException("Please enter the number of weeks.");
+                }
+                else
+                {
+                    CurrentSemester.NumOfWeeks = (int)numOfWeeks;
+                    HomeWindow hw = new HomeWindow();
+                    hw.Show();
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                lblError.Content = ex.Message;
+            }
+
         }
     }
 }

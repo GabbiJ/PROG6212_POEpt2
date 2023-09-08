@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POEClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace ST10034968_PROG6212_POE.Front_End
         public HomeWindow()
         {
             InitializeComponent();
+            lblDateValue.Content = $"{CurrentSemester.StartDate.Day.ToString()} {CurrentSemester.StartDate.ToString("MMMM")} {CurrentSemester.StartDate.Year.ToString()}";
+            lblDurationValue.Content = CurrentSemester.NumOfWeeks;
         }
     }
 }

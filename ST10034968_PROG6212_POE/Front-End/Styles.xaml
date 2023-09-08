@@ -49,4 +49,9 @@
         <Setter Property="BorderBrush" Value="#FFFFEBEB"/>
         <Setter Property="BorderThickness" Value="1.5"/>
     </Style>
+    <Style TargetType="Label" x:Key="errorLbl">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="#FFF56B6B"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
 </ResourceDictionary>
