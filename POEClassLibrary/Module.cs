@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POEClassLibrary
 {
-    internal class Module
+    public class Module
     {
         public string Code { get; set; }
         public string Name { get; set; }

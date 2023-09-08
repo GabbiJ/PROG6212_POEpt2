@@ -14,9 +14,9 @@ namespace POEClassLibrary
         public static int NumOfWeeks { get; set; }
         public static DateTime StartDate { get; set; }
 
-        public static double NumOfHoursPerWeek(Module)
+        public static double NumOfHoursPerWeek(Module m)
         {
-
+            return ((m.NumOfCredits * 10)/ NumOfWeeks) - m.ClassHoursPerWeek;
         }
     }
 }

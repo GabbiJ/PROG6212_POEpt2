@@ -10,5 +10,6 @@ namespace POEClassLibrary
     {
         public DateTime DateCompleted { get; set; }
         public double NumOfHours { get; set; }
+
     }
 }
