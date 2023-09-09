@@ -66,9 +66,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="btnAdd" Content="+" Style="{StaticResource defaultBtn}"  HorizontalAlignment="Center" Margin="0,443,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Padding="20,-6,20,3" Height="39" BorderBrush="#FFD7999E" BorderThickness="2,2,2,2" RenderTransformOrigin="0.531,0.501" VerticalContentAlignment="Center" Background="#FF383133" />
+        <Button x:Name="btnAdd" Content="+" Style="{StaticResource defaultBtn}"  HorizontalAlignment="Center" Margin="0,443,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="30" Padding="20,-6,20,3" Height="39" BorderBrush="#FFD7999E" BorderThickness="2,2,2,2" RenderTransformOrigin="0.531,0.501" VerticalContentAlignment="Center" Background="#FF383133" Click="btnAdd_Click" />
         <Button x:Name="btnEdit" Content="Edit" Style="{StaticResource defaultBtn}"  HorizontalAlignment="Left" Margin="585,167,0,0" VerticalAlignment="Top" Padding="10,2,10,2" UseLayoutRounding="True" Background="#FF383133" BorderBrush="#FF383133" Click="btnEdit_Click"/>
-        <Button x:Name="btnAddStudyTime" Content="Add Study Time" Style="{StaticResource mostProminentBtn}"  HorizontalAlignment="Center" Margin="0,529,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:Name="btnAddStudyTime" Content="Add Study Time" Style="{StaticResource mostProminentBtn}"  HorizontalAlignment="Center" Margin="0,529,0,0" VerticalAlignment="Top" FontSize="24" Click="btnAddStudyTime_Click"/>
         <Button x:Name="btnExit" Content="Exit" Style="{StaticResource defaultBtn}" HorizontalAlignment="Left" Margin="647,543,0,0" VerticalAlignment="Top" Padding="10,2,10,2" Click="btnExit_Click"/>
 
 

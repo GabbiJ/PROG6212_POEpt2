@@ -32,14 +32,14 @@
             </Ellipse.Fill>
         </Ellipse>
         <Label x:Name="label" Content="+" HorizontalAlignment="Left" Margin="51,-38,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontSize="150" FontFamily="Comic Sans MS" Height="188" Width="98"/>
-        <Label x:Name="label1" Content="Module Name:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="263,154,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="Module Code:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="268,190,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3" Content="Number of Credits:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="233,226,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label4" Content="Class Hours Per Week:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="212,257,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txbModName" HorizontalAlignment="Left" Margin="434,156,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
-        <TextBox x:Name="txbModCode" HorizontalAlignment="Left" Margin="434,193,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
-        <TextBox x:Name="txbNumOfCredits" HorizontalAlignment="Left" Margin="434,229,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
-        <TextBox x:Name="txbClassHoursPerWeek" HorizontalAlignment="Left" Margin="434,260,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Center" Style="{StaticResource mostProminentBtn}" Margin="0,308,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label1" Content="Module Name:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="263,125,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Module Code:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="268,161,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Number of Credits:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="233,197,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Class Hours Per Week:" HorizontalAlignment="Left" Style="{StaticResource defaultLbl}" Margin="212,228,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txbModName" HorizontalAlignment="Left" Margin="434,127,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <TextBox x:Name="txbModCode" HorizontalAlignment="Left" Margin="434,164,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
+        <TextBox x:Name="txbNumOfCredits" HorizontalAlignment="Left" Margin="434,200,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
+        <TextBox x:Name="txbClassHoursPerWeek" HorizontalAlignment="Left" Margin="434,231,0,0" Style="{StaticResource defaultTxb}" TextWrapping="Wrap" VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Center" Style="{StaticResource mostProminentBtn}" Margin="0,284,0,0" VerticalAlignment="Top" Click="btnAdd_Click" />
     </Grid>
 </Window>

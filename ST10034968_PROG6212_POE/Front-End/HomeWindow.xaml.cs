@@ -48,5 +48,17 @@ namespace ST10034968_PROG6212_POE.Front_End
             SemesterInfoForm sif = new SemesterInfoForm();
             sif.Show();
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AddModuleForm amf = new AddModuleForm();
+            amf.Show();
+        }
+
+        private void btnAddStudyTime_Click(object sender, RoutedEventArgs e)
+        {
+            AddStudyTimeForm asf = new AddStudyTimeForm();
+            asf.Show();
+        }
     }
 }

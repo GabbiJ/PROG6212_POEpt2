@@ -23,5 +23,12 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //adding inputted info into modules list in CurrentSemester class
+            
+
+        }
     }
 }
