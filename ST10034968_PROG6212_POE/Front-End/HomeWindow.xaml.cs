@@ -23,8 +23,30 @@ namespace ST10034968_PROG6212_POE.Front_End
         public HomeWindow()
         {
             InitializeComponent();
+            //assigning values to labels for start date and duration of the current semester
             lblDateValue.Content = $"{CurrentSemester.StartDate.Day.ToString()} {CurrentSemester.StartDate.ToString("MMMM")} {CurrentSemester.StartDate.Year.ToString()}";
             lblDurationValue.Content = CurrentSemester.NumOfWeeks;
+            displayDataToListView();
+        }
+
+        public void displayDataToListView()
+        {
+            //using a LINQ query to get modules from list in CurrentSemester class and assign to list view 
+            lvModules.ItemsSource = (from m in CurrentSemester.modules
+                                     select m).ToList();
+
+
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            SemesterInfoForm sif = new SemesterInfoForm();
+            sif.Show();
         }
     }
 }

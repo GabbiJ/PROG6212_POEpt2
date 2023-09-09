@@ -21,9 +21,5 @@ namespace POEClassLibrary
             ClassHoursPerWeek = classHoursPerWeek;
         }
 
-        public override string ToString()
-        {
-            return $"{Name}/t {Code}/t {NumOfCredits} Credits/t Class hours per week:{ClassHoursPerWeek}";
-        }
     }
 }
