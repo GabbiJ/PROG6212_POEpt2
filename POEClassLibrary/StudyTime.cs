@@ -10,11 +10,13 @@ namespace POEClassLibrary
     {
         public DateTime DateCompleted { get; set; }
         public double NumOfHours { get; set; }
+        public string Module { get; set; }
 
-        public StudyTime(DateTime dateCompleted, double numOfHours)
+        public StudyTime(DateTime dateCompleted, double numOfHours, string module)
         {
             DateCompleted = dateCompleted;
             NumOfHours = numOfHours;
+            Module = module;
         }
     }
 }

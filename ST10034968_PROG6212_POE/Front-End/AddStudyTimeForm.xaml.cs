@@ -23,6 +23,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         public AddStudyTimeForm()
         {
             InitializeComponent();
+            addItemsToCmb();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -33,6 +34,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 //making temporary variables to assign inputted values to
                 DateTime? dateCom = dpDateCompleted.SelectedDate;
                 double? hrsStudied = Convert.ToDouble(txbHours.Text);
+                string mod = cmbModules.Text;
                 if (dateCom == null)
                 {
                     new NullReferenceException("Please select the date the studying was completed.");
@@ -44,13 +46,21 @@ namespace ST10034968_PROG6212_POE.Front_End
                 else
                 {
                     //adding values to StudyTime list in CurrentSemester class
-                    CurrentSemester.selfStudyCompleted.Add(new StudyTime((DateTime)dateCom, (double)hrsStudied));
+                    CurrentSemester.selfStudyCompleted.Add(new StudyTime((DateTime)dateCom, (double)hrsStudied, mod));
                     this.Close();
                 }
             }
             catch (Exception ex)
             {
                 lblError.Content = ex.Message;
+            }
+        }
+
+        public void addItemsToCmb()
+        {
+            foreach (Module m in CurrentSemester.modules)
+            {
+                cmbModules.Items.Add(m.Name);
             }
         }
     }

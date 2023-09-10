@@ -39,8 +39,8 @@
         <Label x:Name="lblDurationValue" Content="(Weeks value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="351,150,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
         <Label x:Name="lblDateValue" Content="(Date Value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="351,176,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
         <Label x:Name="lblWeeks" Content="Weeks" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="467,150,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
-        <Label x:Name="lblModulesTitle" Content="Modules" Style = "{StaticResource title}" HorizontalAlignment="Left" Margin="105,227,0,0" VerticalAlignment="Top" FontSize="28"/>
-        <ListView x:Name="lvModules" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="105,274,105,177" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5" FontSize="14">
+        <Label x:Name="lblModulesTitle" Content="Modules" Style = "{StaticResource title}" HorizontalAlignment="Left" Margin="84,227,0,0" VerticalAlignment="Top" FontSize="28"/>
+        <ListView x:Name="lvModules" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="84,272,84,179" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5" FontSize="14">
             <ListView.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>
@@ -62,7 +62,8 @@
                     <GridViewColumn Header="Module Code" Width="auto" DisplayMemberBinding="{Binding Code}"/>
                     <GridViewColumn Header="Module Name" Width="auto" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Number of Credits" Width="auto" DisplayMemberBinding="{Binding NumOfCredits}" />
-                    <GridViewColumn Header="Class Hours per Week" Width="auto" DisplayMemberBinding="{Binding ClassHoursPerWeek}" />
+                    <GridViewColumn Header="Class Hours per Week" Width="auto" DisplayMemberBinding="{Binding ClassHoursPerWeek}"/>
+                    <GridViewColumn Header="Remaining study hours this week" Width="auto" DisplayMemberBinding="{Binding selfStudyPerWeek}"/>
                 </GridView>
             </ListView.View>
         </ListView>
@@ -70,7 +71,7 @@
         <Button x:Name="btnEdit" Content="Edit" Style="{StaticResource defaultBtn}"  HorizontalAlignment="Left" Margin="585,167,0,0" VerticalAlignment="Top" Padding="10,2,10,2" UseLayoutRounding="True" Background="#FF383133" BorderBrush="#FF383133" Click="btnEdit_Click"/>
         <Button x:Name="btnAddStudyTime" Content="Add Study Time" Style="{StaticResource mostProminentBtn}"  HorizontalAlignment="Center" Margin="0,529,0,0" VerticalAlignment="Top" FontSize="24" Click="btnAddStudyTime_Click"/>
         <Button x:Name="btnExit" Content="Exit" Style="{StaticResource defaultBtn}" HorizontalAlignment="Left" Margin="647,543,0,0" VerticalAlignment="Top" Padding="10,2,10,2" Click="btnExit_Click"/>
-        <Button x:Name="btnRefresh" Content="Refresh" Style="{StaticResource defaultBtn}" Background="#FF383133" BorderThickness="2,2,2,2" HorizontalAlignment="Left" Margin="619,445,0,0" VerticalAlignment="Top" Padding="10,2,10,5" BorderBrush="#FF7D55A6" Click="btnRefresh_Click"/>
+        <Button x:Name="btnRefresh" Content="Refresh" Style="{StaticResource defaultBtn}" Background="#FF383133" BorderThickness="2,2,2,2" HorizontalAlignment="Left" Margin="640,443,0,0" VerticalAlignment="Top" Padding="10,2,10,5" BorderBrush="#FF7D55A6" Click="btnRefresh_Click"/>
 
 
     </Grid>

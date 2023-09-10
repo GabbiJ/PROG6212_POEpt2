@@ -31,12 +31,21 @@ namespace ST10034968_PROG6212_POE.Front_End
 
         public void displayDataToListView()
         {
-            //using a LINQ query to get modules from list in CurrentSemester class and assign to list view 
-            lvModules.ItemsSource = (from m in CurrentSemester.modules
-                                     select m).ToList();
-
+            //using a LINQ query to get modules from list in CurrentSemester class with an additional list
+            //with calculated remaining study hours for the current week
+            lvModules.ItemsSource = (from m in CurrentSemester.modules 
+                                     select new
+                                         { 
+                                             m.Name,
+                                             m.Code,
+                                             m.NumOfCredits,
+                                             m.ClassHoursPerWeek,
+                                             selfStudyPerWeek = m.remainingHrsThisWeek()
+                                         }).ToList(); 
 
         }
+
+        
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {

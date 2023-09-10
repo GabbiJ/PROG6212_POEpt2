@@ -18,5 +18,7 @@ namespace POEClassLibrary
         {
             return ((m.NumOfCredits * 10)/ NumOfWeeks) - m.ClassHoursPerWeek;
         }
+
+
     }
 }
