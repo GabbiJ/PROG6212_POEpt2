@@ -28,10 +28,10 @@ namespace POEClassLibrary
             //calculating amount of self study hours since the last monday (taking monday as the beginning of the week) of the machines current day 
             //calculating last monday
             int daysSinceLastMonday = ((((int)DateTime.Now.DayOfWeek - (int)DayOfWeek.Monday) + 7) % 7);
-            DateTime lastMondayDate = (DateTime.Now.AddDays(-daysSinceLastMonday)).AddHours(-DateTime.Now.Hour).AddMinutes(-DateTime.Now.Minute).AddSeconds(-DateTime.Now.Second);
+            DateTime lastMondayDate = (DateTime.Now.AddDays(-daysSinceLastMonday));
             //adding all self study hours since last monday to a list using a LINQ query
             double totalSelfStudyHrsThisWeek = (from st in CurrentSemester.selfStudyCompleted
-                                                where st.DateCompleted >= lastMondayDate && st.DateCompleted <= DateTime.Now && st.Module.Equals( this.Name) 
+                                                where st.DateCompleted >= lastMondayDate.Date && st.DateCompleted <= DateTime.Now && st.Module.Equals( this.Name) 
                                                 select st.NumOfHours).ToList().Sum();
             return result -= totalSelfStudyHrsThisWeek;
         }
