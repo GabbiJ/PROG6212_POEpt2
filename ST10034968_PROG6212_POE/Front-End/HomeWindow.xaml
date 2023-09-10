@@ -70,6 +70,7 @@
         <Button x:Name="btnEdit" Content="Edit" Style="{StaticResource defaultBtn}"  HorizontalAlignment="Left" Margin="585,167,0,0" VerticalAlignment="Top" Padding="10,2,10,2" UseLayoutRounding="True" Background="#FF383133" BorderBrush="#FF383133" Click="btnEdit_Click"/>
         <Button x:Name="btnAddStudyTime" Content="Add Study Time" Style="{StaticResource mostProminentBtn}"  HorizontalAlignment="Center" Margin="0,529,0,0" VerticalAlignment="Top" FontSize="24" Click="btnAddStudyTime_Click"/>
         <Button x:Name="btnExit" Content="Exit" Style="{StaticResource defaultBtn}" HorizontalAlignment="Left" Margin="647,543,0,0" VerticalAlignment="Top" Padding="10,2,10,2" Click="btnExit_Click"/>
+        <Button x:Name="btnRefresh" Content="Refresh" Style="{StaticResource defaultBtn}" Background="#FF383133" BorderThickness="2,2,2,2" HorizontalAlignment="Left" Margin="619,445,0,0" VerticalAlignment="Top" Padding="10,2,10,5" BorderBrush="#FF7D55A6" Click="btnRefresh_Click"/>
 
 
     </Grid>

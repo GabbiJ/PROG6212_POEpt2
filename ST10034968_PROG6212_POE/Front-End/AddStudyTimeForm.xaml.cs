@@ -1,4 +1,5 @@
-﻿using System;
+﻿using POEClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +25,33 @@ namespace ST10034968_PROG6212_POE.Front_End
             InitializeComponent();
         }
 
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //taking values inputted and adding them to studyTime array
+            try
+            {
+                //making temporary variables to assign inputted values to
+                DateTime? dateCom = dpDateCompleted.SelectedDate;
+                double? hrsStudied = Convert.ToDouble(txbHours.Text);
+                if (dateCom == null)
+                {
+                    new NullReferenceException("Please select the date the studying was completed.");
+                }
+                else if (hrsStudied == null)
+                {
+                    new NullReferenceException("Please enter the amount of hours studied.");
+                }
+                else
+                {
+                    //adding values to StudyTime list in CurrentSemester class
+                    CurrentSemester.selfStudyCompleted.Add(new StudyTime((DateTime)dateCom, (double)hrsStudied));
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                lblError.Content = ex.Message;
+            }
+        }
     }
 }

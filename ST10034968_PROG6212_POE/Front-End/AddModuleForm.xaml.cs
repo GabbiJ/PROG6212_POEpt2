@@ -55,6 +55,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 else
                 {
                     CurrentSemester.modules.Add(new Module(modCode, modName, (int)numOfCredits, (int)classHrsPerWeek));
+                    this.Close();
                 }
             }
             catch (Exception ex)

@@ -60,5 +60,10 @@ namespace ST10034968_PROG6212_POE.Front_End
             AddStudyTimeForm asf = new AddStudyTimeForm();
             asf.Show();
         }
+
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            displayDataToListView();
+        }
     }
 }
