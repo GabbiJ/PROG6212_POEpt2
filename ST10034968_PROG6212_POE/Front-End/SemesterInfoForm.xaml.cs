@@ -20,11 +20,18 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class SemesterInfoForm : Window
     {
+        /// <summary>
+        /// Constructor for SemesterInfoForm
+        /// </summary>
         public SemesterInfoForm()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Method that captures the data entered in the window and stores it in CurrentSemester class when the "Add" button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
             try

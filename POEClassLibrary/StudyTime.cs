@@ -16,7 +16,7 @@ namespace POEClassLibrary
         public string Module { get; set; }
 
         /// <summary>
-        /// Constructor that ssignes data to all StudyTime properties 
+        /// Constructor that assignes data to all StudyTime properties 
         /// </summary>
         /// <param name="dateCompleted">The date the study time was completed</param>
         /// <param name="numOfHours">The number of hours studied</param>

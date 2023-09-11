@@ -23,7 +23,11 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// method that opens a new SemesterInfoForm window and closes the current window when the "Let's Begin" button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             SemesterInfoForm sif = new SemesterInfoForm();

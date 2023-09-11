@@ -24,7 +24,11 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Method that captures data and uses it to add a module to the modules list in the CurrentSemester class when the "Add" button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             //adding inputted info into modules list in CurrentSemester class
