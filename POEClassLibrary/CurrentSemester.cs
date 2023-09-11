@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace POEClassLibrary
 {
+    /// <summary>
+    /// Static class that stores all data for the current semester
+    /// </summary>
     public static class CurrentSemester
     {
         //Declarations
@@ -13,12 +16,5 @@ namespace POEClassLibrary
         public static List<StudyTime> selfStudyCompleted = new List<StudyTime>();
         public static int NumOfWeeks { get; set; }
         public static DateTime StartDate { get; set; }
-
-        public static double NumOfHoursPerWeek(Module m)
-        {
-            return ((m.NumOfCredits * 10)/ NumOfWeeks) - m.ClassHoursPerWeek;
-        }
-
-
     }
 }
