@@ -93,7 +93,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             asf.Show();
         }
         /// <summary>
-        /// 
+        /// Method that updates the listview with the latest stored modules when the refresh button is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

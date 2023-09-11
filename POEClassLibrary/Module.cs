@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace POEClassLibrary
 {
+    /// <summary>
+    /// class that would store information about a given module
+    /// </summary>
     public class Module
     {
         public string Code { get; set; }
@@ -13,6 +16,13 @@ namespace POEClassLibrary
         public int NumOfCredits { get; set; }
         public int ClassHoursPerWeek { get; set; }
 
+        /// <summary>
+        /// Constructor for the module class that takes input for all available properties
+        /// </summary>
+        /// <param name="code">Module Code</param>
+        /// <param name="name">Module Name</param>
+        /// <param name="numOfCredits">Number of credits the module is worth</param>
+        /// <param name="classHoursPerWeek">The amount of class hours this module has per academic week</param>
         public Module(string code, string name, int numOfCredits, int classHoursPerWeek)
         {
             Code = code;
@@ -20,7 +30,10 @@ namespace POEClassLibrary
             NumOfCredits = numOfCredits;
             ClassHoursPerWeek = classHoursPerWeek;
         }
-
+        /// <summary>
+        /// Method that calculates the remaining hours of self study this module has left this week 
+        /// </summary>
+        /// <returns>The remaining hours left of self study this week for the module</returns>
         public double remainingHrsThisWeek()
         {
             //calculating how many self study hours there are for the module per week
@@ -35,7 +48,10 @@ namespace POEClassLibrary
                                                 select st.NumOfHours).ToList().Sum();
             return result -= totalSelfStudyHrsThisWeek;
         }
-
+        /// <summary>
+        /// Method that calculates the self study hours this module needs per week
+        /// </summary>
+        /// <returns> The amount of self study hours the module has</returns>
         public double selfStudyPerWeek() => ((this.NumOfCredits * 10) / CurrentSemester.NumOfWeeks) - this.ClassHoursPerWeek;
 
     }
