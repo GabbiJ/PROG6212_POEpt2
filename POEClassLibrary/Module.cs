@@ -14,7 +14,7 @@ namespace POEClassLibrary
         public string Code { get; set; }
         public string Name { get; set; }
         public int NumOfCredits { get; set; }
-        public int ClassHoursPerWeek { get; set; }
+        public double ClassHoursPerWeek { get; set; }
 
         /// <summary>
         /// Constructor for the module class that takes input for all available properties
@@ -23,7 +23,7 @@ namespace POEClassLibrary
         /// <param name="name">Module Name</param>
         /// <param name="numOfCredits">Number of credits the module is worth</param>
         /// <param name="classHoursPerWeek">The amount of class hours this module has per academic week</param>
-        public Module(string code, string name, int numOfCredits, int classHoursPerWeek)
+        public Module(string code, string name, int numOfCredits, double classHoursPerWeek)
         {
             Code = code;
             Name = name;

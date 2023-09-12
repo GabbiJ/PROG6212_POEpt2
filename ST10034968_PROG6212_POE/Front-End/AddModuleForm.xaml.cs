@@ -38,7 +38,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 string? modName = txbModName.Text;
                 string? modCode = txbModCode.Text;
                 int? numOfCredits = Convert.ToInt32(txbNumOfCredits.Text);
-                int? classHrsPerWeek = Convert.ToInt32(txbClassHoursPerWeek.Text);
+                double? classHrsPerWeek = Convert.ToInt32(txbClassHoursPerWeek.Text);
                 //inputting module name
                 if (modName == null)
                 {
@@ -58,7 +58,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 }
                 else
                 {
-                    CurrentSemester.modules.Add(new Module(modCode, modName, (int)numOfCredits, (int)classHrsPerWeek));
+                    CurrentSemester.modules.Add(new Module(modCode, modName, (int)numOfCredits, (double)classHrsPerWeek));
                     this.Close();
                 }
             }
