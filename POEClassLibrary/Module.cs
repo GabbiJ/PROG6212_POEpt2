@@ -52,7 +52,7 @@ namespace POEClassLibrary
         /// Method that calculates the self study hours this module needs per week
         /// </summary>
         /// <returns> The amount of self study hours the module has</returns>
-        public double selfStudyPerWeek() => ((this.NumOfCredits * 10) / CurrentSemester.NumOfWeeks) - this.ClassHoursPerWeek;
+        public double selfStudyPerWeek() => ((double)(this.NumOfCredits * 10) / CurrentSemester.NumOfWeeks) - this.ClassHoursPerWeek;
 
     }
 }

@@ -46,9 +46,10 @@ namespace ST10034968_PROG6212_POE.Front_End
                                              m.Name,
                                              m.Code,
                                              m.NumOfCredits,
-                                             m.ClassHoursPerWeek,
-                                             selfStudyPerWeek = m.remainingHrsThisWeek()
-                                         }).ToList(); 
+                                             ClassHoursPerWeek = m.ClassHoursPerWeek.ToString("F2"),
+                                             TotalStudyHrsPerWeek = m.selfStudyPerWeek().ToString("F2"),
+                                             selfStudyPerWeek = m.remainingHrsThisWeek().ToString("F2")
+                                     }).ToList(); 
 
         }
 

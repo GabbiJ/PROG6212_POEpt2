@@ -32,3 +32,37 @@ C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG62
 C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\POEClassLibrary.dll
 C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\POEClassLibrary.pdb
 C:\Users\Gabbi 9\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 1\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.csproj.CopyComplete
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.exe
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.deps.json
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.runtimeconfig.json
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.dll
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.pdb
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\POEClassLibrary.dll
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\POEClassLibrary.pdb
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.csproj.AssemblyReference.cache
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\Styles.baml
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddModuleForm.g.cs
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddStudyTimeForm.g.cs
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\GreetingPage.g.cs
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\HomeWindow.g.cs
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\SemesterInfoForm.g.cs
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE_MarkupCompile.cache
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE_MarkupCompile.lref
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\App.baml
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddModuleForm.baml
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddStudyTimeForm.baml
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\GreetingPage.baml
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\HomeWindow.baml
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\SemesterInfoForm.baml
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.g.resources
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.AssemblyInfoInputs.cache
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.AssemblyInfo.cs
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.csproj.CoreCompileInputs.cache
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.csproj.CopyComplete
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.dll
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\refint\ST10034968_PROG6212_POE.dll
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.pdb
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.genruntimeconfig.cache
+C:\Users\lab_services_student\Downloads\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ref\ST10034968_PROG6212_POE.dll
