@@ -70,6 +70,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// <param name="e"></param>
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
+            this.close();
             SemesterInfoForm sif = new SemesterInfoForm();
             sif.Show();
         }
