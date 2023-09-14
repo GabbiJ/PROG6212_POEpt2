@@ -70,9 +70,9 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// <param name="e"></param>
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            this.close();
             SemesterInfoForm sif = new SemesterInfoForm();
             sif.Show();
+            this.Close();
         }
         /// <summary>
         /// Method that opens the form to add a module when the 'Add' button is clicked
