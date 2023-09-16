@@ -44,5 +44,5 @@ The current semester information can be changed at any time.
 * The user can enter the new information and click "Enter"
 * The home window will reappear and the user will see the updated semester information at the top.
 # Link to My POE Part 1 GitHub Repository
-(GitHub Repository)[https://github.com/VCSTDN/prog6212-part-1-ST10034968]
+[GitHub Repository](https://github.com/VCSTDN/prog6212-part-1-ST10034968)
 
