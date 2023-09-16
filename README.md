@@ -5,7 +5,7 @@ This program is aimed to aid Lerato in her studies by allowing her to keep track
 
 # System Requirements
 
-* The system must use the WIndows operating system (Windows 7 or a later version).
+* The system must use the Windows operating system (Windows 7 or a later version).
 * The system must have Microsoft Visual Studio installed and be able to run an application using a WPF user interface.
 
 # Installing and Starting the Program
@@ -17,10 +17,10 @@ This program is aimed to aid Lerato in her studies by allowing her to keep track
 ## Starting the Program
 There are two methods to running this program. The first method involves running the executable file directly, however if it is not available or does not work, the second method involves running the solution file in Visual Studio.
 ### Method 1: Running the executable file
-1. Within the unzipped folder navigate to the executable (the system may refer to this file as an application) file using the following file path as a reference: **ST100334968_PROG6212_POE\ST100334968_PROG6212_POE\ST100334968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG_POE.exe**
+1. Within the unzipped folder navigate to the executable (the system may refer to this file as an application) file using the following file path as a reference: **ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG_POE.exe**
 2. Open the executable to run the application.
 ### Method 2: Running the solution in visual studio 
-1. Within the unzipped folder navigate to the solution file using the following file path as reference: **ST100334968_PROG6212_POE\ST100334968_PROG6212_POE\ST100334968_PROG6212_POE.sln**
+1. Within the unzipped folder navigate to the solution file using the following file path as reference: **ST10034968_PROG6212_POE\ST10034968_PROG6212_POE\ST10034968_PROG6212_POE.sln**
 2. Open the solution file in visual studio and click the green play button to run the file.
 # Using the Program
 
