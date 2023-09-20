@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE.Front_End"
         mc:Ignorable="d"
-        Title="Enter Current Semester Information" Height="342" Width="737">
+        Title="Enter Current Semester Information" Height="369" Width="737">
     <Grid Background="#2E282A" Margin="0,0,0,0">
         <Label x:Name="label" Content="Enter Current Semester Information" Style = "{StaticResource title}"  HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top">
             <Label.Foreground>

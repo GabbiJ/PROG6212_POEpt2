@@ -42,25 +42,29 @@ namespace ST10034968_PROG6212_POE.Front_End
                 //inputting module name
                 if (modName == null)
                 {
-                    throw new NullReferenceException("Please enter the module name\n");
+                    throw new Exception("Please enter the module name\n");
                 }
                 else if (modCode == null)
                 {
-                    throw new NullReferenceException("Please enter the module code\n");
+                    throw new Exception("Please enter the module code\n");
                 }
                 else if (numOfCredits == null)
                 {
-                    throw new NullReferenceException("Please enter the number of credits\n");
+                    throw new Exception("Please enter the number of credits\n");
                 }
                 else if (classHrsPerWeek == null)
                 {
-                    throw new NullReferenceException("Please enter class hours per week\n");
+                    throw new Exception("Please enter class hours per week\n");
                 }
                 else
                 {
                     CurrentSemester.modules.Add(new Module(modCode, modName, (int)numOfCredits, (double)classHrsPerWeek));
                     this.Close();
                 }
+            }
+            catch (FormatException fe)
+            {
+                lblError.Content = "Please ensure values are entered correctly.";
             }
             catch (Exception ex)
             {

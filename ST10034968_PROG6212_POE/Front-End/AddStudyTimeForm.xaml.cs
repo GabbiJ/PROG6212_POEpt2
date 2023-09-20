@@ -37,18 +37,30 @@ namespace ST10034968_PROG6212_POE.Front_End
                 string mod = cmbModules.Text;
                 if (dateCom == null)
                 {
-                    new NullReferenceException("Please select the date the studying was completed.");
+                    throw new Exception("Please select the date the studying was completed.");
                 }
                 else if (hrsStudied == null)
                 {
-                    new NullReferenceException("Please enter the amount of hours studied.");
+                    throw new Exception("Please enter the amount of hours studied.");
                 }
                 else
                 {
-                    //adding values to StudyTime list in CurrentSemester class
-                    CurrentSemester.selfStudyCompleted.Add(new StudyTime((DateTime)dateCom, (double)hrsStudied, mod));
-                    this.Close();
+                    //check if date studied is in this semester
+                    if (dateCom < CurrentSemester.StartDate)
+                    {
+                        throw new Exception("The date must be in this current semester.");
+                    }
+                    else
+                    {
+                        //adding values to StudyTime list in CurrentSemester class
+                        CurrentSemester.selfStudyCompleted.Add(new StudyTime((DateTime)dateCom, (double)hrsStudied, mod));
+                        this.Close();
+                    }                 
                 }
+            }
+            catch (FormatException fe)
+            {
+                lblError.Content = "Please ensure values are entered correctly.";
             }
             catch (Exception ex)
             {

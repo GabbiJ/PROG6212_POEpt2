@@ -26,24 +26,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabbi 9\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\lab_services_student\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Gabriella\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE.csproj",
+      "projectUniqueName": "C:\\Users\\lab_services_student\\Source\\Repos\\prog6212-part-1-ST10034968\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE.csproj",
       "projectName": "ST10034968_PROG6212_POE",
-      "projectPath": "E:\\Gabriella\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE.csproj",
-      "packagesPath": "C:\\Users\\Gabbi 9\\.nuget\\packages\\",
-      "outputPath": "E:\\Gabriella\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE\\obj\\",
+      "projectPath": "C:\\Users\\lab_services_student\\Source\\Repos\\prog6212-part-1-ST10034968\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE.csproj",
+      "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lab_services_student\\Source\\Repos\\prog6212-part-1-ST10034968\\ST10034968_PROG6212_POE\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Gabbi 9\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\lab_services_student\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,15 +46,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "E:\\Gabriella\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE\\POEClassLibrary\\POEClassLibrary.csproj": {
-              "projectPath": "E:\\Gabriella\\ST10034968_PROG6212_POE\\ST10034968_PROG6212_POE\\POEClassLibrary\\POEClassLibrary.csproj"
+            "C:\\Users\\lab_services_student\\Source\\Repos\\prog6212-part-1-ST10034968\\POEClassLibrary\\POEClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\lab_services_student\\Source\\Repos\\prog6212-part-1-ST10034968\\POEClassLibrary\\POEClassLibrary.csproj"
             }
           }
         }
@@ -92,7 +86,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

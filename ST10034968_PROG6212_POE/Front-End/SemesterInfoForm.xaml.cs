@@ -40,7 +40,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 DateTime? startDate = dpStartDate.SelectedDate;
                 if (startDate == null)
                 {
-                    new NullReferenceException("Please select a start date.");
+                    throw new Exception("Please select a start date.");
                 }
                 else
                 {
@@ -50,7 +50,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 int? numOfWeeks = Convert.ToInt32(txbWeeks.Text);
                 if (numOfWeeks == null) 
                 {
-                    new NullReferenceException("Please enter the number of weeks.");
+                    throw new Exception("Please enter the number of weeks.");
                 }
                 else
                 {
@@ -60,10 +60,15 @@ namespace ST10034968_PROG6212_POE.Front_End
                     this.Close();
                 }
             }
+            catch (FormatException fe)
+            {
+                lblError.Content = "Please ensure values are entered correctly.";
+            }
             catch (Exception ex)
             {
                 lblError.Content = ex.Message;
             }
+
 
         }
     }
