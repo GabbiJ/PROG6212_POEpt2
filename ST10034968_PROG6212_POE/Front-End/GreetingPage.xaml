@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ST10034968_PROG6212_POE.Front_End"
-        mc:Ignorable="d"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="Lerato's Studying Organiser" Height="450" Width="800">
-    <Grid Background="#2E282A">
+    <Grid Background="#2E282A" >
         <Ellipse HorizontalAlignment="Left" Height="225" Margin="31,-64,0,0" VerticalAlignment="Top" Width="225">
             <Ellipse.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -80,7 +80,25 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <Button x:Name="btnStart" Content="Lets Begin" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top" Background="#FF2E282A" Foreground="#FFFFEBEB" FontSize="20" Padding="15,2,15,5" BorderThickness="1.5,1.5,1.5,1.5" Click="btnStart_Click">
+        <Button x:Name="btnLogIn" Content="Log In" HorizontalAlignment="Left" Margin="253,243,0,0" VerticalAlignment="Top" Background="#FF2E282A" Foreground="#FFFFEBEB" FontSize="20" Padding="15,2,15,5" BorderThickness="1.5,1.5,1.5,1.5" Click="btnLogIn_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <LinearGradientBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </LinearGradientBrush.RelativeTransform>
+                    <GradientStop Color="#FFD7999E"/>
+                    <GradientStop Color="#FFB3CBB9" Offset="1"/>
+                    <GradientStop Color="#FF7D55A6" Offset="0.33"/>
+                    <GradientStop Color="#FF84A9C0" Offset="0.66"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+        </Button>
+        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="450,243,0,0" VerticalAlignment="Top" Background="#FF2E282A" Foreground="#FFFFEBEB" FontSize="20" Padding="15,2,15,5" BorderThickness="1.5,1.5,1.5,1.5" Click="btnRegister_Click">
             <Button.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <LinearGradientBrush.RelativeTransform>

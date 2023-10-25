@@ -178,3 +178,37 @@ C:\Users\USER-PC\Source\Repos\prog6212-part-1-ST10034968\ST10034968_PROG6212_POE
 C:\Users\USER-PC\Source\Repos\prog6212-part-1-ST10034968\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.pdb
 C:\Users\USER-PC\Source\Repos\prog6212-part-1-ST10034968\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.genruntimeconfig.cache
 C:\Users\USER-PC\Source\Repos\prog6212-part-1-ST10034968\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ref\ST10034968_PROG6212_POE.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.exe
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.deps.json
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.runtimeconfig.json
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\ST10034968_PROG6212_POE.pdb
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\POEClassLibrary.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\POEClassLibrary.pdb
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.csproj.AssemblyReference.cache
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\Styles.baml
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddModuleForm.g.cs
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddStudyTimeForm.g.cs
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\GreetingPage.g.cs
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\HomeWindow.g.cs
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\SemesterInfoForm.g.cs
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE_MarkupCompile.cache
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE_MarkupCompile.lref
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\App.baml
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddModuleForm.baml
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\AddStudyTimeForm.baml
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\GreetingPage.baml
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\HomeWindow.baml
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\SemesterInfoForm.baml
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.g.resources
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.AssemblyInfoInputs.cache
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.AssemblyInfo.cs
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.csproj.CoreCompileInputs.cache
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.csproj.CopyComplete
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\refint\ST10034968_PROG6212_POE.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.pdb
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ST10034968_PROG6212_POE.genruntimeconfig.cache
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\ref\ST10034968_PROG6212_POE.dll

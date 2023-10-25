@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,7 +30,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        private async void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             //adding inputted info into modules list in CurrentSemester class
             try
@@ -70,8 +71,6 @@ namespace ST10034968_PROG6212_POE.Front_End
             {
                 lblError.Content = ex.Message;
             }
-            
-
         }
     }
 }

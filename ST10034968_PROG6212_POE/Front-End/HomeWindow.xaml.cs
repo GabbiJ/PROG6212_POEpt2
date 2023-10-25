@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace ST10034968_PROG6212_POE.Front_End
 {
@@ -40,20 +41,19 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             //using a LINQ query to get modules from list in CurrentSemester class with an additional list
             //with calculated remaining study hours for the current week
-            lvModules.ItemsSource = (from m in CurrentSemester.modules 
+            lvModules.ItemsSource = (from m in CurrentSemester.modules
                                      select new
-                                         { 
-                                             m.Name,
-                                             m.Code,
-                                             m.NumOfCredits,
-                                             ClassHoursPerWeek = m.ClassHoursPerWeek.ToString("F2"),
-                                             TotalStudyHrsPerWeek = m.selfStudyPerWeek().ToString("F2"),
-                                             selfStudyPerWeek = m.remainingHrsThisWeek().ToString("F2")
-                                     }).ToList(); 
+                                     {
+                                         m.Name,
+                                         m.Code,
+                                         m.NumOfCredits,
+                                         ClassHoursPerWeek = m.ClassHoursPerWeek.ToString("F2"),
+                                         TotalStudyHrsPerWeek = m.selfStudyPerWeek().ToString("F2"),
+                                         selfStudyPerWeek = m.remainingHrsThisWeek().ToString("F2")
+                                     }).ToList();
 
         }
 
-        
         /// <summary>
         /// Method that allows the application to terminate when the 'Exit' button is clicked
         /// </summary>
@@ -79,10 +79,12 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        private async void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+
             AddModuleForm amf = new AddModuleForm();
             amf.Show();
+
         }
         /// <summary>
         /// Method that opens the form to add study time when the 'Add Study Time' button is clicked

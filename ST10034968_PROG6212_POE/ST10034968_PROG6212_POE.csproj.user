@@ -19,6 +19,12 @@
     <Compile Update="Front-End\HomeWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Front-End\LoginForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Front-End\RegisterForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Front-End\SemesterInfoForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +40,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Front-End\HomeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Front-End\LoginForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Front-End\RegisterForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Front-End\SemesterInfoForm.xaml">
