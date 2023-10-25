@@ -80,42 +80,12 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <Button x:Name="btnLogIn" Content="Log In" HorizontalAlignment="Left" Margin="253,243,0,0" VerticalAlignment="Top" Background="#FF2E282A" Foreground="#FFFFEBEB" FontSize="20" Padding="15,2,15,5" BorderThickness="1.5,1.5,1.5,1.5" Click="btnLogIn_Click">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FFD7999E"/>
-                    <GradientStop Color="#FFB3CBB9" Offset="1"/>
-                    <GradientStop Color="#FF7D55A6" Offset="0.33"/>
-                    <GradientStop Color="#FF84A9C0" Offset="0.66"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
-        <Button x:Name="btnRegister" Content="Register" HorizontalAlignment="Left" Margin="450,243,0,0" VerticalAlignment="Top" Background="#FF2E282A" Foreground="#FFFFEBEB" FontSize="20" Padding="15,2,15,5" BorderThickness="1.5,1.5,1.5,1.5" Click="btnRegister_Click">
-            <Button.BorderBrush>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <LinearGradientBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
-                            <RotateTransform Angle="90" CenterX="0.5" CenterY="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </LinearGradientBrush.RelativeTransform>
-                    <GradientStop Color="#FFD7999E"/>
-                    <GradientStop Color="#FFB3CBB9" Offset="1"/>
-                    <GradientStop Color="#FF7D55A6" Offset="0.33"/>
-                    <GradientStop Color="#FF84A9C0" Offset="0.66"/>
-                </LinearGradientBrush>
-            </Button.BorderBrush>
-        </Button>
+        <Button x:Name="btnLogIn" Style="{StaticResource mostProminentBtn}" Content="Log In" HorizontalAlignment="Left" Margin="253,243,0,0" VerticalAlignment="Top" FontSize="20" Padding="15,2,15,5" BorderThickness="1.5,1.5,1.5,1.5" Click="btnLogIn_Click"/>
+
+
+        <Button x:Name="btnRegister" Style="{StaticResource mostProminentBtn}" Content="Register" HorizontalAlignment="Left" Margin="450,243,0,0" VerticalAlignment="Top" FontSize="20" Padding="15,2,15,5" BorderThickness="1.5,1.5,1.5,1.5" Click="btnRegister_Click"/>
+
+
 
     </Grid>
 </Window>
