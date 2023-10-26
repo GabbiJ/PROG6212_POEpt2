@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ST10034968_PROG6212_POE.Front_End
@@ -24,9 +25,17 @@ namespace ST10034968_PROG6212_POE.Front_End
             InitializeComponent();
         }
 
-        private void lblRegister_IsMouseDirectlyOver(object sender, DependencyPropertyChangedEventArgs e)
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void HyperlinkHere_Click(object sender, RoutedEventArgs e)
+        {
+            RegisterForm rf = new RegisterForm();
+            rf.Show();
+            this.Close();
+            e.Handled = true;
         }
     }
 }
