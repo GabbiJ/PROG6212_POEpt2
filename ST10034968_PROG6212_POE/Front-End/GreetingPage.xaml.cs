@@ -30,14 +30,16 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// <param name="e"></param>
         private void btnLogIn_Click(object sender, RoutedEventArgs e)
         {
-            SemesterInfoForm sif = new SemesterInfoForm();
-            sif.Show();
+            LoginForm lf = new LoginForm();
+            lf.Show();
             this.Close();
         }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-
+            RegisterForm rf = new RegisterForm();
+            rf.Show();
+            this.Close();
         }
     }
 }
