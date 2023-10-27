@@ -20,7 +20,7 @@
                     </LinearGradientBrush.RelativeTransform>
                     <GradientStop Color="#FF7D55A6"/>
                     <GradientStop Color="#FFD89A9E" Offset="1"/>
-                    <GradientStop Color="#FFD7999E" Offset="0.992"/>
+                    <GradientStop Color="#FFD7999E" Offset="1"/>
                 </LinearGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
