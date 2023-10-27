@@ -33,7 +33,7 @@
                 </LinearGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
-        <Label x:Name="lblTitle" Content="Your Current Semester" Style = "{StaticResource title}" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="#FF282224" FontSize="35"/>
+        <Label x:Name="lblTitle" Content="(Username)'s Current Semester" Style = "{StaticResource title}" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Foreground="#FF282224" FontSize="22"/>
         <Label x:Name="lblDuration" Content="Duration:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="217,153,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
         <Label x:Name="lblStartDate" Content="Start Date:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="209,179,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
         <Label x:Name="lblDurationValue" Content="(Weeks value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="393,153,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
