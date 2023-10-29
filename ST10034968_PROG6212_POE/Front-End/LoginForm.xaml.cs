@@ -38,12 +38,13 @@ namespace ST10034968_PROG6212_POE.Front_End
                 if (Login(txbUsername.Text, pbPassword.Password))
                 {
                     //storing user data in memory
-                    using (con)
+                    SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PROG6212_POEPART2;Integrated Security=True");
+                    using (con2)
                     {
                         //fetching user from the database that matches the inputted username
-                        string strSelect = $"SELECT * FROM tblEmployee WHERE Username = {txbUsername.Text};";
-                        con.Open();
-                        SqlCommand cmdSelect = new SqlCommand(strSelect, con);
+                        string strSelect = $"SELECT * FROM Student WHERE Username = '{txbUsername.Text}';";
+                        con2.Open();
+                        SqlCommand cmdSelect = new SqlCommand(strSelect, con2);
                         using (SqlDataReader r = cmdSelect.ExecuteReader())
                         {
                             while (r.Read())
@@ -54,6 +55,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                     }
                     //closing this window and going to homepage
                     HomeWindow hw = new HomeWindow();
+                    hw.Show();
                     this.Close();
                 }
                 else
@@ -82,11 +84,11 @@ namespace ST10034968_PROG6212_POE.Front_End
             //hashing inputted password 
             string hashedPass = hashString(pass);
             //seeing if any users match the credentials
-            Student fetchedStudent = null;
+            Student? fetchedStudent = null;
             using (con)
             {
                 //fetching user from the database that matches the inputted username
-                string strSelect = $"SELECT * FROM tblEmployee WHERE Username = {username};";
+                string strSelect = $"SELECT * FROM Student WHERE Username = '{username}';";
                 con.Open();
                 SqlCommand cmdSelect = new SqlCommand(strSelect, con);
                 //creating student object out of fetched data
@@ -109,20 +111,6 @@ namespace ST10034968_PROG6212_POE.Front_End
             }
         }
 
-        public void registerStudent(string username, string pass)
-        {
-            //hashing password
-            string hashedPass = hashString(pass);
-            //inserting data into database
-            using (con)
-            {
-                string strInsert = $"INSERT INTO Student VALUES('{username}', '{hashedPass}');)";
-                con.Open();
-                SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                cmdInsert.ExecuteNonQuery();
-            }
-
-        }
 
         public string hashString(string rawText)
         {

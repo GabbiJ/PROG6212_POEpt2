@@ -28,8 +28,8 @@
         <Label x:Name="label1" Content="Password:" Style="{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="246,208,0,0" VerticalAlignment="Top" FontSize="20"/>
         <TextBox x:Name="txbUsername" Style="{StaticResource defaultTxb}" HorizontalAlignment="Left" Height="18" Margin="421,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
         <PasswordBox x:Name="pbPassword" HorizontalAlignment="Left" Height="18" Margin="421,217,0,0" VerticalAlignment="Top" Width="134" Password="" Background="#FF2E282A" BorderBrush="#FFFFEBEB" FontSize="14" Foreground="White" BorderThickness="0,0,0,1.5"/>
-        <Button x:Name="btnRegister" Style="{StaticResource mostProminentBtn}" Content="Register" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblError" Style="{StaticResource errorLbl}" Content = "Error" HorizontalAlignment="Center" Margin="0,373,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRegister" Style="{StaticResource mostProminentBtn}" Content="Register" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Click="btnRegister_Click"/>
+        <Label x:Name="lblError" Style="{StaticResource errorLbl}" HorizontalAlignment="Center" Margin="0,373,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

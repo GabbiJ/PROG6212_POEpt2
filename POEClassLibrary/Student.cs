@@ -25,5 +25,7 @@ namespace POEClassLibrary
         }
 
         public Student() { }
+
+
     }
 }
