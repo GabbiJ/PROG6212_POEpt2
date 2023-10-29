@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace POEClassLibrary
 {
-    internal class Connections
+    public class Connections
     {
         public static SqlConnection GetConnection()
         {

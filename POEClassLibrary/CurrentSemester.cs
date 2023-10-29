@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -17,14 +18,6 @@ namespace POEClassLibrary
         public static List<StudyTime> selfStudyCompleted = new List<StudyTime>();
         public static int NumOfWeeks { get; set; }
         public static DateTime StartDate { get; set; }
-        SqlConnection con = Connections.GetConnection();
-
-        public static void loadCurrentSemester(string username)
-        {
-            using (con)
-            {
-
-            }
-        }
+        public static Student user = new Student();
     }
 }

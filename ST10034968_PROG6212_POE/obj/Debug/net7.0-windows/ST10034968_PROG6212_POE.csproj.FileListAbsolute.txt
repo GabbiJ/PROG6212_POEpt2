@@ -216,3 +216,11 @@ C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG62
 C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\RegisterForm.g.cs
 C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\LoginForm.baml
 C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\obj\Debug\net7.0-windows\Front-End\RegisterForm.baml
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\EntityFramework.SqlServer.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\EntityFramework.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\USER-PC\OneDrive - ADvTECH Ltd\Varsity College\Year 2\Semester 2\PROG6212\POE\POE Part 2\prog6212-part-2\ST10034968_PROG6212_POE\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

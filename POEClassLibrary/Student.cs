@@ -5,15 +5,18 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
+using System.ComponentModel.Design;
 
 namespace POEClassLibrary
 {
-    internal class Student
+    /// <summary>
+    /// This class contains information pertaining to a user (student) and relevant methods for logging in and registering a user using the database
+    /// </summary>
+    public class Student
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        SqlConnection con = Connections.GetConnection();
-
 
         public Student(string username, string password)
         {
@@ -21,25 +24,6 @@ namespace POEClassLibrary
             Password = password;
         }
 
-        public void registerStudent(string username, string pass)
-        {
-            //hashing password
-            //the methods used to hash the password were done using mehotds found on https://stackoverflow.com/questions/4181198/how-to-hash-a-password
-           
-            //inserting data into database
-            using (con)
-                {
-                    string strInsert = $"INSERT INTO Student VALUES('{username}', '{pass}');)";
-                    con.Open();
-                    SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                    cmdInsert.ExecuteNonQuery();
-                }
-
-        }
-
-        public void login(string username, string pass)
-        {
-
-        }
+        public Student() { }
     }
 }

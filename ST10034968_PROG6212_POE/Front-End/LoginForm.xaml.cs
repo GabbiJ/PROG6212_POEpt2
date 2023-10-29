@@ -1,5 +1,8 @@
-﻿using System;
+﻿using POEClassLibrary;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +23,7 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class LoginForm : Window
     {
+        SqlConnection con = Connections.GetConnection();
         public LoginForm()
         {
             InitializeComponent();
@@ -27,6 +31,41 @@ namespace ST10034968_PROG6212_POE.Front_End
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+
+            try
+            {
+                //checking if login credentials are correct then if correct the user is stored in memeory
+                if (Login(txbUsername.Text, pbPassword.Password))
+                {
+                    //storing user data in memory
+                    using (con)
+                    {
+                        //fetching user from the database that matches the inputted username
+                        string strSelect = $"SELECT * FROM tblEmployee WHERE Username = {txbUsername.Text};";
+                        con.Open();
+                        SqlCommand cmdSelect = new SqlCommand(strSelect, con);
+                        using (SqlDataReader r = cmdSelect.ExecuteReader())
+                        {
+                            while (r.Read())
+                            {
+                                CurrentSemester.user = new Student(r.GetString(0), r.GetString(1));
+                            }
+                        }
+                    }
+                    //closing this window and going to homepage
+                    HomeWindow hw = new HomeWindow();
+                    this.Close();
+                }
+                else
+                {
+                    lblError.Content = "Username or password is incorrect.";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblError.Content = ex.Message;
+            }
+
 
         }
 
@@ -36,6 +75,70 @@ namespace ST10034968_PROG6212_POE.Front_End
             rf.Show();
             this.Close();
             e.Handled = true;
+        }
+
+        public bool Login(string username, string pass)
+        {
+            //hashing inputted password 
+            string hashedPass = hashString(pass);
+            //seeing if any users match the credentials
+            Student fetchedStudent = null;
+            using (con)
+            {
+                //fetching user from the database that matches the inputted username
+                string strSelect = $"SELECT * FROM tblEmployee WHERE Username = {username};";
+                con.Open();
+                SqlCommand cmdSelect = new SqlCommand(strSelect, con);
+                //creating student object out of fetched data
+                using (SqlDataReader r = cmdSelect.ExecuteReader())
+                {
+                    while (r.Read())
+                    {
+                        fetchedStudent = new Student(r.GetString(0), r.GetString(1));
+                    }
+                }
+            }
+            //checking if username and password match
+            if (fetchedStudent.Username.Equals(username) && fetchedStudent.Password.Equals(hashedPass))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void registerStudent(string username, string pass)
+        {
+            //hashing password
+            string hashedPass = hashString(pass);
+            //inserting data into database
+            using (con)
+            {
+                string strInsert = $"INSERT INTO Student VALUES('{username}', '{hashedPass}');)";
+                con.Open();
+                SqlCommand cmdInsert = new SqlCommand(strInsert, con);
+                cmdInsert.ExecuteNonQuery();
+            }
+
+        }
+
+        public string hashString(string rawText)
+        {
+            string salt = "HU958lew8439i";
+            //the methods used to hash the password were done using methods found on https://www.sean-lloyd.com/post/hash-a-string/
+            using (var sha = new System.Security.Cryptography.SHA256Managed())
+            {
+                //converting string to byte array
+                byte[] textBytes = System.Text.Encoding.UTF8.GetBytes(rawText + salt);
+                byte[] hashBytes = sha.ComputeHash(textBytes);
+
+                //converting from byte to string
+                string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
+
+                return hash;
+            }
         }
     }
 }

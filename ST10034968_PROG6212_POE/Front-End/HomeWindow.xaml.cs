@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace ST10034968_PROG6212_POE.Front_End
 {
@@ -21,6 +22,7 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class HomeWindow : Window
     {
+        SqlConnection con = Connections.GetConnection();
         /// <summary>
         /// constructor for HomeWindow
         /// </summary>
@@ -105,5 +107,6 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             displayDataToListView();
         }
+
     }
 }
