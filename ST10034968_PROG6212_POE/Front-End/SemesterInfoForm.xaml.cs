@@ -55,8 +55,8 @@ namespace ST10034968_PROG6212_POE.Front_End
                     //entering info into the database
                     using(con)
                     {
-                        string strInsert = $"UPDATE CurrentSemester" +
-                            $"SET StartDate = '{((DateTime)startDate).ToString("YYYY-MM-DD")}', NumOfWeeks = {numOfWeeks}" +
+                        string strInsert = $"UPDATE CurrentSemester " +
+                            $"SET StartDate = '{((DateTime)startDate).ToString("yyyy-MM-dd")}', NumOfWeeks = {numOfWeeks} " +
                             $"WHERE Username = '{CurrentSemester.user.Username}';";
                         con.Open();
                         SqlCommand cmdInsert = new SqlCommand(strInsert, con);

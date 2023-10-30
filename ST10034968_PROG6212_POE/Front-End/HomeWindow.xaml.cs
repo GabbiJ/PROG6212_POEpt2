@@ -109,69 +109,62 @@ namespace ST10034968_PROG6212_POE.Front_End
 
         private void loadCurrentSemester()
         {
-            try
+            using (con)
             {
-                using (con)
+                //loading current semester information from database
+                string strSelect = $"SELECT * FROM CurrentSemester;";
+                con.Open();
+                SqlCommand cmdSelect = new SqlCommand(strSelect, con);
+                using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
-                    //loading current semester information from database
-                    string strSelect = $"SELECT * FROM CurrentSemester";
-                    con.Open();
-                    SqlCommand cmdSelect = new SqlCommand(strSelect, con);
-                    using (SqlDataReader r = cmdSelect.ExecuteReader())
+                    if(r.Read())
                     {
                         CurrentSemester.StartDate = r.GetDateTime(1);
                         CurrentSemester.NumOfWeeks = r.GetInt32(2);
                     }
-                    //loading all modules from the database
-                    strSelect = $"SELECT * FROM RegisterModule " +
-                        $"JOIN Module ON RegisterModule.ModCode = Module.ModCode" +
-                        $"JOIN CurrentSemester ON RegisterModule.CurrentSemesterID = CurrentSemester.CurrentSemesterID" +
-                        $"JOIN Student ON CurrentSemester.Username = Student.Username" +
-                        $"WHERE Username = '{CurrentSemester.user}';";
-                    cmdSelect = new SqlCommand(strSelect, con);
-                    //list to temporarily store modules
-                    List<Module> tempModList = new List<Module>();
-                    using (SqlDataReader r = cmdSelect.ExecuteReader())
-                    {
-                        while (r.Read())
-                        {
-                            Module tempMod = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
-                            tempModList.Add(tempMod);
-                        }
-                    }
-                    //assigning temp list to list stored in current semester
-                    CurrentSemester.modules = tempModList;
-                    //loading all study time from the database
-                    strSelect = $"SELECT FROM StudyTime" +
-                        $"JOIN CurrentSemester ON StudyTime.CurrentSemesterID = CurrentSemester.CurrentSemesterID" +
-                        $"JOIN Student ON CurrentSemester.Username = Student.Username" +
-                        $"WHERE Username = '{CurrentSemester.user}'";
-                    cmdSelect = new SqlCommand(strSelect, con);
-                    //making temporary list to store study time 
-                    List<StudyTime> tempStList = new List<StudyTime>();
-                    using (SqlDataReader r = cmdSelect.ExecuteReader())
-                    {
-                        while (r.Read())
-                        {
-                            StudyTime tempSt = new StudyTime(r.GetDateTime(1), r.GetDouble(2), r.GetString(3));
-                            tempStList.Add(tempSt);
-                        }
-                    }
-                    //assigning temp study time list to list stored in current semester
-                    CurrentSemester.selfStudyCompleted = tempStList;
                 }
-            }
-            //if there is nothing entered for current semester details, open that window
-            catch (InvalidOperationException ex)
-            {
-                SemesterInfoForm sif = new SemesterInfoForm();
-                sif.Show();
-                this.Close();
+                //loading all modules from the database
+                strSelect = $"SELECT * FROM RegisterModule " +
+                    $"JOIN Module ON RegisterModule.ModCode = Module.ModCode " +
+                    $"JOIN CurrentSemester ON RegisterModule.CurrentSemesterID = CurrentSemester.CurrentSemesterID " +
+                    $"WHERE CurrentSemester.Username = '{CurrentSemester.user}';";
+                cmdSelect = new SqlCommand(strSelect, con);
+                //list to temporarily store modules
+                List<Module> tempModList = new List<Module>();
+                using (SqlDataReader r = cmdSelect.ExecuteReader())
+                {
+                    while (r.Read())
+                    {
+                        Module tempMod = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
+                        tempModList.Add(tempMod);
+                    }
+                }
+                //assigning temp list to list stored in current semester
+                CurrentSemester.modules = tempModList;
+                //loading all study time from the database
+                strSelect = $"SELECT * FROM StudyTime " +
+                    $"JOIN CurrentSemester ON StudyTime.CurrentSemesterID = CurrentSemester.CurrentSemesterID " +
+                    $"WHERE Username = '{CurrentSemester.user}'";
+                cmdSelect = new SqlCommand(strSelect, con);
+                //making temporary list to store study time 
+                List<StudyTime> tempStList = new List<StudyTime>();
+                using (SqlDataReader r = cmdSelect.ExecuteReader())
+                {
+                    while (r.Read())
+                    {
+                        StudyTime tempSt = new StudyTime(r.GetDateTime(1), r.GetDouble(2), r.GetString(3));
+                        tempStList.Add(tempSt);
+                    }
+                }
+                //assigning temp study time list to list stored in current semester
+                CurrentSemester.selfStudyCompleted = tempStList;
             }
 
             //assign values for duration and start date of semester
             lblStartDate.Content = $"Start Date: {CurrentSemester.StartDate.Day.ToString()} {CurrentSemester.StartDate.ToString("MMMM")} {CurrentSemester.StartDate.Year.ToString()}";
-            lblDuration.Content = $"Duration: {CurrentSemester.NumOfWeeks}";
+            lblDuration.Content = $"Duration: {CurrentSemester.NumOfWeeks} weeks";
+            //assign username value to title
+            lblTitle.Content = $"{CurrentSemester.user.Username}'s Current Semester" ;
         }
     }
 }
