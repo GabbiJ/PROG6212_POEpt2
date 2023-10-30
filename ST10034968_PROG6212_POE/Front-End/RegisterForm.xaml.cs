@@ -27,7 +27,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         public RegisterForm()
         {
             InitializeComponent();
-        }              
+        }
 
         public void registerStudent(string username, string pass)
         {

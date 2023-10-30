@@ -77,7 +77,7 @@ namespace ST10034968_PROG6212_POE.Front_End
 
         public void addModule(string modCode, string modName, int modCredits, double modClassHours)
         {
-            
+
             Module m = null;
             using (con)
             {
@@ -89,7 +89,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                     //checking if module exists (using module code) to register student for
                     if (r.Read())
                     {
-                        m = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2) , r.GetDouble(3));
+                        m = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
                         MessageBoxResult confirmModuleInsertion = MessageBox.Show("Another module with this code already exists (information below). By clicking yes, you agree to the information already stored under this module code to be used rather than the information you have entered." +
                             $"\nModule Code: {m.Code}" +
                             $"\nModule Name: {m.Name}" +
@@ -104,7 +104,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                             return;
                         }
                         //inserting data into RegisterModule when module already exists
-                        if (confirmModuleInsertion == MessageBoxResult.Yes) 
+                        if (confirmModuleInsertion == MessageBoxResult.Yes)
                         {
                             string strInsert = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{m.Code}')";
                             SqlCommand cmdInsert = new SqlCommand(strInsert, con);
@@ -113,16 +113,17 @@ namespace ST10034968_PROG6212_POE.Front_End
                             return;
                         }
                     }
-                    //inserting data into both Module table and RegisterModule table
-                    //inserting new module into Module table
-                    string strInsert2 = $"INSERT INTO Module VALUES('{modCode}', '{modName}', {modCredits}, {modClassHours})";
-                    SqlCommand cmdInsert2 = new SqlCommand(strInsert2, con);
-                    cmdInsert2.ExecuteNonQuery();
-                    //inserting into RegisterModule table
-                    strInsert2 = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{modCode}')";
-                    cmdInsert2 = new SqlCommand(strInsert2, con);
-                    cmdInsert2.ExecuteNonQuery();
                 }
+                //inserting data into both Module table and RegisterModule table
+                //inserting new module into Module table
+                string strInsert2 = $"INSERT INTO Module VALUES('{modCode}', '{modName}', {modCredits}, {modClassHours})";
+                SqlCommand cmdInsert2 = new SqlCommand(strInsert2, con);
+                cmdInsert2.ExecuteNonQuery();
+                //inserting into RegisterModule table
+                strInsert2 = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{modCode}')";
+                cmdInsert2 = new SqlCommand(strInsert2, con);
+                cmdInsert2.ExecuteNonQuery();
+
             }
             this.Close();
         }
