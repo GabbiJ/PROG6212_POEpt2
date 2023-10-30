@@ -21,11 +21,13 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class RegisterForm : Window
     {
+        static SqlConnection con = Connections.GetConnection();
+        static SqlConnection con2 = Connections.GetConnection();
+
         public RegisterForm()
         {
             InitializeComponent();
-        }
-        static SqlConnection con = Connections.GetConnection();
+        }              
 
         public void registerStudent(string username, string pass)
         {
@@ -33,12 +35,16 @@ namespace ST10034968_PROG6212_POE.Front_End
             {
                 //hashing password
                 string hashedPass = hashString(pass);
-                //inserting data into database
-                using (con)
+                //inserting student data into database
+                using (con2)
                 {
                     string strInsert = $"INSERT INTO Student VALUES('{username}', '{hashedPass}');";
-                    con.Open();
-                    SqlCommand cmdInsert = new SqlCommand(strInsert, con);
+                    con2.Open();
+                    SqlCommand cmdInsert = new SqlCommand(strInsert, con2);
+                    cmdInsert.ExecuteNonQuery();
+                    //creating a row in current semester entity for student
+                    strInsert = $"INSERT INTO CurrentSemester VALUES(NULL, NULL, '{username}');";
+                    cmdInsert = new SqlCommand(strInsert, con2);
                     cmdInsert.ExecuteNonQuery();
                 }
             }

@@ -1,6 +1,8 @@
 ﻿using POEClassLibrary;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,7 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class SemesterInfoForm : Window
     {
+        static SqlConnection con = Connections.GetConnection();
         /// <summary>
         /// Constructor for SemesterInfoForm
         /// </summary>
@@ -36,25 +39,27 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             try
             {
-                //assigning start date value
+                //checking if correct values have been entered
                 DateTime? startDate = dpStartDate.SelectedDate;
+                int? numOfWeeks = Convert.ToInt32(txbWeeks.Text);
                 if (startDate == null)
                 {
                     throw new Exception("Please select a start date.");
                 }
-                else
-                {
-                    CurrentSemester.StartDate = (DateTime)startDate;
-                }
-                //assigning number weeks value and closing window and going to home window
-                int? numOfWeeks = Convert.ToInt32(txbWeeks.Text);
-                if (numOfWeeks == null) 
+                else if (numOfWeeks == null) 
                 {
                     throw new Exception("Please enter the number of weeks.");
                 }
                 else
                 {
-                    CurrentSemester.NumOfWeeks = (int)numOfWeeks;
+                    //entering info into the database
+                    using(con)
+                    {
+                        string strInsert = $"UPDATE CurrentSemester" +
+                            $"SET StartDate = '{((DateTime)startDate).ToString("YYYY-MM-DD")}', NumOfWeeks = {numOfWeeks}" +
+                            $"WHERE Username = '{CurrentSemester.user.Username}';";
+                    }
+
                     HomeWindow hw = new HomeWindow();
                     hw.Show();
                     this.Close();

@@ -24,6 +24,7 @@ namespace ST10034968_PROG6212_POE.Front_End
     public partial class LoginForm : Window
     {
         SqlConnection con = Connections.GetConnection();
+        SqlConnection con2 = Connections.GetConnection();
         public LoginForm()
         {
             InitializeComponent();
@@ -38,7 +39,6 @@ namespace ST10034968_PROG6212_POE.Front_End
                 if (Login(txbUsername.Text, pbPassword.Password))
                 {
                     //storing user data in memory
-                    SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PROG6212_POEPART2;Integrated Security=True");
                     using (con2)
                     {
                         //fetching user from the database that matches the inputted username
@@ -67,8 +67,6 @@ namespace ST10034968_PROG6212_POE.Front_End
             {
                 lblError.Content = ex.Message;
             }
-
-
         }
 
         private void HyperlinkHere_Click(object sender, RoutedEventArgs e)
@@ -101,6 +99,10 @@ namespace ST10034968_PROG6212_POE.Front_End
                 }
             }
             //checking if username and password match
+            if (fetchedStudent == null) 
+            {
+                return false;
+            }
             if (fetchedStudent.Username.Equals(username) && fetchedStudent.Password.Equals(hashedPass))
             {
                 return true;

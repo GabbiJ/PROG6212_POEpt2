@@ -34,11 +34,8 @@
             </Ellipse.Fill>
         </Ellipse>
         <Label x:Name="lblTitle" Content="(Username)'s Current Semester" Style = "{StaticResource title}" HorizontalAlignment="Center" Margin="0,24,0,0" VerticalAlignment="Top" Foreground="#FF282224" FontSize="22"/>
-        <Label x:Name="lblDuration" Content="Duration:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="217,153,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
-        <Label x:Name="lblStartDate" Content="Start Date:" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="209,179,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
-        <Label x:Name="lblDurationValue" Content="(Weeks value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="393,153,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
-        <Label x:Name="lblDateValue" Content="(Date Value)" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="393,179,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
-        <Label x:Name="lblWeeks" Content="Weeks" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="509,153,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
+        <Label x:Name="lblDuration" Content="Click the Edit button " Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="209,153,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
+        <Label x:Name="lblStartDate" Content="to enter your current semester information" Style = "{StaticResource defaultLbl}" HorizontalAlignment="Left" Margin="209,179,0,0" VerticalAlignment="Top" Foreground="#FF2E282A" FontWeight="Medium"/>
         <Label x:Name="lblModulesTitle" Content="Modules" Style = "{StaticResource title}" HorizontalAlignment="Left" Margin="84,227,0,0" VerticalAlignment="Top" FontSize="28"/>
         <ListView x:Name="lvModules" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="84,272,84,179" Foreground="White" Background="#FF2E282A" BorderThickness="1.5,1.5,1.5,1.5" FontSize="14">
             <ListView.BorderBrush>
