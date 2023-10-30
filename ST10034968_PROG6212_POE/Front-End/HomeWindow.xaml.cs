@@ -119,6 +119,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 {
                     if(r.Read())
                     {
+                        CurrentSemester.ID = r.GetInt32(0);
                         CurrentSemester.StartDate = r.GetDateTime(1);
                         CurrentSemester.NumOfWeeks = r.GetInt32(2);
                     }
@@ -146,7 +147,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                     $"JOIN CurrentSemester ON StudyTime.CurrentSemesterID = CurrentSemester.CurrentSemesterID " +
                     $"WHERE Username = '{CurrentSemester.user}'";
                 cmdSelect = new SqlCommand(strSelect, con);
-                //making temporary list to store study time 
+                //making temporary list to store study time  
                 List<StudyTime> tempStList = new List<StudyTime>();
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {

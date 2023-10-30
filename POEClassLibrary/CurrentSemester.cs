@@ -14,6 +14,7 @@ namespace POEClassLibrary
     public static class CurrentSemester
     {
         //Declarations
+        public static int ID { get; set; }
         public static List<Module> modules = new List<Module>();
         public static List<StudyTime> selfStudyCompleted = new List<StudyTime>();
         public static int NumOfWeeks { get; set; }
