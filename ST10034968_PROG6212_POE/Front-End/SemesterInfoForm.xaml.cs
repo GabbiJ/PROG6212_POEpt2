@@ -58,8 +58,11 @@ namespace ST10034968_PROG6212_POE.Front_End
                         string strInsert = $"UPDATE CurrentSemester" +
                             $"SET StartDate = '{((DateTime)startDate).ToString("YYYY-MM-DD")}', NumOfWeeks = {numOfWeeks}" +
                             $"WHERE Username = '{CurrentSemester.user.Username}';";
+                        con.Open();
+                        SqlCommand cmdInsert = new SqlCommand(strInsert, con);
+                        cmdInsert.ExecuteNonQuery();
                     }
-
+                    //going back to home window
                     HomeWindow hw = new HomeWindow();
                     hw.Show();
                     this.Close();
