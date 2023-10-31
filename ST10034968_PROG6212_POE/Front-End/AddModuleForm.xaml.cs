@@ -76,8 +76,22 @@ namespace ST10034968_PROG6212_POE.Front_End
 
         public void addModuleToDB(string modCode, string modName, int modCredits, double modClassHours)
         {
-
-            Module m = null;
+            //checking if student currently has same module then warning them if they proceed there will be a duplicate
+            foreach (Module m in CurrentSemester.modules)
+            {
+                if (modCode.Equals(m.Code))
+                {
+                    MessageBoxResult confirmDuplication = MessageBox.Show("You are already registered with this module. Proceeding with adding this module will result in you seeing a duplicate module" +
+                        "\nDo you want to proceed?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if(confirmDuplication == MessageBoxResult.No)
+                    {
+                        return;
+                    }
+                } 
+            }
+            //checking if the module already exists in the database 
+            Module mod = null;
+            MessageBoxResult? confirmModuleInsertion = null;
             using (SqlConnection con = Connections.GetConnection())
             {
                 string strSelect = $"SELECT * FROM Module WHERE ModCode = '{modCode}'";
@@ -88,15 +102,13 @@ namespace ST10034968_PROG6212_POE.Front_End
                     //checking if module exists (using module code) to register student for
                     if (r.Read())
                     {
-                        //checking if student has already registered for this module, if they have notify them they will see a duplicate module
-                        string strSelect = $"SELECT * FROM ";
-                        //displaying 
-                        m = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
-                        MessageBoxResult confirmModuleInsertion = MessageBox.Show("Another module with this code already exists (information below). By clicking yes, you agree to the information already stored under this module code to be used rather than the information you have entered." +
-                            $"\nModule Code: {m.Code}" +
-                            $"\nModule Name: {m.Name}" +
-                            $"\nNumber of Credits: {m.NumOfCredits}" +
-                            $"\nClass hours per week: {m.ClassHoursPerWeek}", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        //asking student if they are ok with letting the module theyve inputted be overwritten by already stored module 
+                        mod = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
+                        confirmModuleInsertion = MessageBox.Show("Another module with this code already exists (information below). By clicking yes, you agree to the information already stored under this module code to be used rather than the information you have entered." +
+                            $"\nModule Code: {mod.Code}" +
+                            $"\nModule Name: {mod.Name}" +
+                            $"\nNumber of Credits: {mod.NumOfCredits}" +
+                            $"\nClass hours per week: {mod.ClassHoursPerWeek}", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
                         if (confirmModuleInsertion == MessageBoxResult.No)
                         {
                             txbModName.Clear();
@@ -105,16 +117,16 @@ namespace ST10034968_PROG6212_POE.Front_End
                             txbClassHoursPerWeek.Clear();
                             return;
                         }
-                        //inserting data into RegisterModule when module already exists
-                        if (confirmModuleInsertion == MessageBoxResult.Yes)
-                        {
-                            string strInsert = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{m.Code}')";
-                            SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                            cmdInsert.ExecuteNonQuery();
-                            this.Close();
-                            return;
-                        }
                     }
+                }
+                //inserting data into RegisterModule when module already exists
+                if (confirmModuleInsertion == MessageBoxResult.Yes)
+                {
+                    string strInsert = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{mod.Code}')";
+                    SqlCommand cmdInsert = new SqlCommand(strInsert, con);
+                    cmdInsert.ExecuteNonQuery();
+                    this.Close();
+                    return;
                 }
                 //inserting data into both Module table and RegisterModule table
                 //inserting new module into Module table
