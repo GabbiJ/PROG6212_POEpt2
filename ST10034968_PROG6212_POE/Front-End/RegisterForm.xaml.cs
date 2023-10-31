@@ -26,7 +26,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             InitializeComponent();
         }
 
-        public void registerStudent(string username, string pass)
+        public async void registerStudent(string username, string pass)
         { 
             try
             {
@@ -36,13 +36,13 @@ namespace ST10034968_PROG6212_POE.Front_End
                 using (SqlConnection con2 = Connections.GetConnection())
                 {
                     string strInsert = $"INSERT INTO Student VALUES('{username}', '{hashedPass}');";
-                    con2.Open();
+                    await con2.OpenAsync();
                     SqlCommand cmdInsert = new SqlCommand(strInsert, con2);
-                    cmdInsert.ExecuteNonQuery();
+                    await cmdInsert.ExecuteNonQueryAsync();
                     //creating a row in current semester entity for student
                     strInsert = $"INSERT INTO CurrentSemester VALUES(NULL, NULL, '{username}');";
                     cmdInsert = new SqlCommand(strInsert, con2);
-                    cmdInsert.ExecuteNonQuery();
+                    cmdInsert.ExecuteNonQueryAsync();
                 }
             }
             catch (Exception ex)
@@ -68,7 +68,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             }
         }
 
-        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        private async void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -83,11 +83,11 @@ namespace ST10034968_PROG6212_POE.Front_End
                 {
                     //fetching user from the database that matches the inputted username
                     string strSelect = $"SELECT * FROM Student WHERE Username = '{txbUsername.Text}';";
-                    con.Open();
+                    await con.OpenAsync();
                     SqlCommand cmdSelect = new SqlCommand(strSelect, con);
                     using (SqlDataReader r = cmdSelect.ExecuteReader())
                     {
-                        while (r.Read())
+                        while (await r.ReadAsync())
                         {
                             s = new Student(r.GetString(0), r.GetString(1));
                         }

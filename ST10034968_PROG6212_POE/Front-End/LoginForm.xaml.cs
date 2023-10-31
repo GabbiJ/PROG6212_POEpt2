@@ -29,7 +29,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -39,18 +39,18 @@ namespace ST10034968_PROG6212_POE.Front_End
                     throw new Exception("Please enter a username and password.");
                 }
                 //checking if login credentials are correct then if correct the user is stored in memeory
-                if (Login(txbUsername.Text, pbPassword.Password))
+                if (await Login(txbUsername.Text, pbPassword.Password))
                 {
                     //storing user data in memory
                     using (con)
                     {
                         //fetching user from the database that matches the inputted username
                         string strSelect = $"SELECT * FROM Student WHERE Username = '{txbUsername.Text}';";
-                        con.Open();
+                        await con.OpenAsync();
                         SqlCommand cmdSelect = new SqlCommand(strSelect, con);
                         using (SqlDataReader r = cmdSelect.ExecuteReader())
                         {
-                            while (r.Read())
+                            while (await r.ReadAsync())
                             {
                                 CurrentSemester.user = new Student(r.GetString(0), r.GetString(1));
                             }
@@ -80,7 +80,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             e.Handled = true;
         }
 
-        public bool Login(string username, string pass)
+        public async Task<bool> Login(string username, string pass)
         {
             //hashing inputted password 
             string hashedPass = hashString(pass);
@@ -90,12 +90,12 @@ namespace ST10034968_PROG6212_POE.Front_End
             {
                 //fetching user from the database that matches the inputted username
                 string strSelect = $"SELECT * FROM Student WHERE Username = '{username}';";
-                con2.Open();
+                await con2.OpenAsync();
                 SqlCommand cmdSelect = new SqlCommand(strSelect, con2);
                 //creating student object out of fetched data
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
-                    while (r.Read())
+                    while (await r.ReadAsync())
                     {
                         fetchedStudent = new Student(r.GetString(0), r.GetString(1));
                     }
