@@ -86,14 +86,14 @@ namespace ST10034968_PROG6212_POE.Front_End
             }
         }
 
-        public void addStudyTimeToDB(DateTime DateCompleted, double numOfHours, string modName)
+        public async void addStudyTimeToDB(DateTime DateCompleted, double numOfHours, string modName)
         {
             using (SqlConnection con = Connections.GetConnection())
             {
                 string strInsert = $"INSERT INTO StudyTime VALUES('{DateCompleted.ToString("yyyy-MM-dd")}', {numOfHours.ToString("F2", CultureInfo.GetCultureInfo("en-US"))}, '{modName}', {CurrentSemester.ID})";
-                con.Open();
+                await con.OpenAsync();
                 SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                cmdInsert.ExecuteNonQuery();
+                await cmdInsert.ExecuteNonQueryAsync();
             }
             this.Close();
         }
