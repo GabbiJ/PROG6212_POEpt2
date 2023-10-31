@@ -34,7 +34,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnEnter_Click(object sender, RoutedEventArgs e)
+        private async void btnEnter_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -57,9 +57,9 @@ namespace ST10034968_PROG6212_POE.Front_End
                         string strInsert = $"UPDATE CurrentSemester " +
                             $"SET StartDate = '{((DateTime)startDate).ToString("yyyy-MM-dd")}', NumOfWeeks = {numOfWeeks} " +
                             $"WHERE Username = '{CurrentSemester.user.Username}';";
-                        con.Open();
+                        await con.OpenAsync();
                         SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                        cmdInsert.ExecuteNonQuery();
+                        await cmdInsert.ExecuteNonQueryAsync();
                     }
                     //going back to home window
                     HomeWindow hw = new HomeWindow();

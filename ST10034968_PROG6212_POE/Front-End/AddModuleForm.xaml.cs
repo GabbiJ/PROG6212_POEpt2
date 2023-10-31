@@ -31,7 +31,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void btnAdd_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             //adding modules to database
             try
@@ -74,7 +74,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             }
         }
 
-        public void addModuleToDB(string modCode, string modName, int modCredits, double modClassHours)
+        public async void addModuleToDB(string modCode, string modName, int modCredits, double modClassHours)
         {
             //checking if student currently has same module then warning them if they proceed there will be a duplicate
             foreach (Module m in CurrentSemester.modules)
@@ -95,12 +95,12 @@ namespace ST10034968_PROG6212_POE.Front_End
             using (SqlConnection con = Connections.GetConnection())
             {
                 string strSelect = $"SELECT * FROM Module WHERE ModCode = '{modCode}'";
-                con.Open();
+                await con.OpenAsync();
                 SqlCommand cmdSelect = new SqlCommand(strSelect, con);
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
                     //checking if module exists (using module code) to register student for
-                    if (r.Read())
+                    if (await r.ReadAsync())
                     {
                         //asking student if they are ok with letting the module theyve inputted be overwritten by already stored module 
                         mod = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
@@ -124,7 +124,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 {
                     string strInsert = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{mod.Code}')";
                     SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                    cmdInsert.ExecuteNonQuery();
+                    await cmdInsert.ExecuteNonQueryAsync();
                     this.Close();
                     return;
                 }
@@ -132,12 +132,11 @@ namespace ST10034968_PROG6212_POE.Front_End
                 //inserting new module into Module table
                 string strInsert2 = $"INSERT INTO Module VALUES('{modCode}', '{modName}', {modCredits}, {modClassHours})";
                 SqlCommand cmdInsert2 = new SqlCommand(strInsert2, con);
-                cmdInsert2.ExecuteNonQuery();
+                await cmdInsert2.ExecuteNonQueryAsync();
                 //inserting into RegisterModule table
                 strInsert2 = $"INSERT INTO RegisterModule VALUES('{CurrentSemester.ID}', '{modCode}')";
                 cmdInsert2 = new SqlCommand(strInsert2, con);
-                cmdInsert2.ExecuteNonQuery();
-
+                await cmdInsert2.ExecuteNonQueryAsync();
             }
             this.Close();
         }

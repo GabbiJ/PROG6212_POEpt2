@@ -23,7 +23,6 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class HomeWindow : Window
     {
-        SqlConnection con = Connections.GetConnection();
         /// <summary>
         /// constructor for HomeWindow
         /// </summary>
@@ -108,17 +107,17 @@ namespace ST10034968_PROG6212_POE.Front_End
             displayDataToListView();
         }
 
-        private void loadCurrentSemester()
+        private async void loadCurrentSemester()
         {
-            using (SqlConnection con2 = Connections.GetConnection())
+            using (SqlConnection con = Connections.GetConnection())
             {
                 //loading current semester information from database
                 string strSelect = $"SELECT * FROM CurrentSemester WHERE Username = '{CurrentSemester.user.Username}';";
-                con2.Open();
-                SqlCommand cmdSelect = new SqlCommand(strSelect, con2);
+                await con.OpenAsync();
+                SqlCommand cmdSelect = new SqlCommand(strSelect, con);
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
-                    if(r.Read())
+                    if(await r.ReadAsync())
                     {
                         CurrentSemester.ID = r.GetInt32(0);
                         //only assigning following values if they are present in the database
@@ -142,12 +141,12 @@ namespace ST10034968_PROG6212_POE.Front_End
                 strSelect = $"SELECT * FROM Module " +
                     $"JOIN RegisterModule ON Module.ModCode = RegisterModule.ModCode " +
                     $"WHERE CurrentSemesterID = '{CurrentSemester.ID}';";
-                cmdSelect = new SqlCommand(strSelect, con2);
+                cmdSelect = new SqlCommand(strSelect, con);
                 //list to temporarily store modules
                 List<Module> tempModList = new List<Module>();
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
-                    while (r.Read())
+                    while (await r.ReadAsync())
                     {
                         Module tempMod = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
                         tempModList.Add(tempMod);
@@ -158,12 +157,12 @@ namespace ST10034968_PROG6212_POE.Front_End
                 //loading all study time from the database
                 strSelect = $"SELECT * FROM StudyTime " +
                     $"WHERE CurrentSemesterID = '{CurrentSemester.ID}'";
-                cmdSelect = new SqlCommand(strSelect, con2);
+                cmdSelect = new SqlCommand(strSelect, con);
                 //making temporary list to store study time  
                 List<StudyTime> tempStList = new List<StudyTime>();
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
-                    while (r.Read())
+                    while (await r.ReadAsync())
                     {
                         StudyTime tempSt = new StudyTime(r.GetDateTime(1), r.GetDouble(2), r.GetString(3));
                         tempStList.Add(tempSt);
