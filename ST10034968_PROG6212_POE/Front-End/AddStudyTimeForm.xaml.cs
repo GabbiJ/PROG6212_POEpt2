@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,7 +90,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             using (SqlConnection con = Connections.GetConnection())
             {
-                string strInsert = $"INSERT INTO StudyTime VALUES('{DateCompleted.ToString("yyyy-MM-dd")}', {numOfHours}, '{modName}', {CurrentSemester.ID})";
+                string strInsert = $"INSERT INTO StudyTime VALUES('{DateCompleted.ToString("yyyy-MM-dd")}', {numOfHours.ToString("F2", CultureInfo.GetCultureInfo("en-US"))}, '{modName}', {CurrentSemester.ID})";
                 con.Open();
                 SqlCommand cmdInsert = new SqlCommand(strInsert, con);
                 cmdInsert.ExecuteNonQuery();
