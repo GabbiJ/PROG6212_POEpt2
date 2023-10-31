@@ -31,9 +31,13 @@ namespace ST10034968_PROG6212_POE.Front_End
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
             try
             {
+                //checking if all fields have been filled correctly
+                if (txbUsername.Text == "" || pbPassword.Password == "")
+                {
+                    throw new Exception("Please enter a username and password.");
+                }
                 //checking if login credentials are correct then if correct the user is stored in memeory
                 if (Login(txbUsername.Text, pbPassword.Password))
                 {

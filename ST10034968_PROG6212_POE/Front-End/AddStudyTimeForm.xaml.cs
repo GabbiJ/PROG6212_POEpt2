@@ -21,7 +21,6 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class AddStudyTimeForm : Window
     {
-        static SqlConnection con = Connections.GetConnection();
         public AddStudyTimeForm()
         {
             InitializeComponent();
@@ -88,11 +87,11 @@ namespace ST10034968_PROG6212_POE.Front_End
 
         public void addStudyTimeToDB(DateTime DateCompleted, double numOfHours, string modName)
         {
-            using (SqlConnection con2 = Connections.GetConnection())
+            using (SqlConnection con = Connections.GetConnection())
             {
                 string strInsert = $"INSERT INTO StudyTime VALUES('{DateCompleted.ToString("yyyy-MM-dd")}', {numOfHours}, '{modName}', {CurrentSemester.ID})";
-                con2.Open();
-                SqlCommand cmdInsert = new SqlCommand(strInsert, con2);
+                con.Open();
+                SqlCommand cmdInsert = new SqlCommand(strInsert, con);
                 cmdInsert.ExecuteNonQuery();
             }
             this.Close();

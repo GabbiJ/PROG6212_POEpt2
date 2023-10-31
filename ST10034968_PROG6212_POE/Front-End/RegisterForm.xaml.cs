@@ -21,22 +21,19 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class RegisterForm : Window
     {
-        static SqlConnection con = Connections.GetConnection();
-        static SqlConnection con2 = Connections.GetConnection();
-
         public RegisterForm()
         {
             InitializeComponent();
         }
 
         public void registerStudent(string username, string pass)
-        {
+        { 
             try
             {
                 //hashing password
                 string hashedPass = hashString(pass);
                 //inserting student data into database
-                using (con2)
+                using (SqlConnection con2 = Connections.GetConnection())
                 {
                     string strInsert = $"INSERT INTO Student VALUES('{username}', '{hashedPass}');";
                     con2.Open();
@@ -75,9 +72,14 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             try
             {
+                //checking all fields have valid
+                if (txbUsername.Text == "" || pbPassword.Password == "")
+                {
+                    throw new Exception("Please enter a username and password.");
+                }
                 //checking if username is taken
                 Student s = null;
-                using (con)
+                using (SqlConnection con = Connections.GetConnection())
                 {
                     //fetching user from the database that matches the inputted username
                     string strSelect = $"SELECT * FROM Student WHERE Username = '{txbUsername.Text}';";

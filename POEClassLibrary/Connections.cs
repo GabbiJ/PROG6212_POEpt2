@@ -11,7 +11,7 @@ namespace POEClassLibrary
     {
         public static SqlConnection GetConnection()
         {
-            string strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PROG6212_POEPART2;Integrated Security=True";
+            string strCon = @"Server=tcp:st10034968server.database.windows.net,1433;Initial Catalog=ST10034968_PROG6212_POE;Persist Security Info=False;User ID=ST10034968;Password=@Dvtech123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
             return new SqlConnection(strCon);
         }
     }

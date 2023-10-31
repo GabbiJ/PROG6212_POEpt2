@@ -22,7 +22,6 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class SemesterInfoForm : Window
     {
-        static SqlConnection con = Connections.GetConnection();
         /// <summary>
         /// Constructor for SemesterInfoForm
         /// </summary>
@@ -53,7 +52,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 else
                 {
                     //entering info into the database
-                    using(con)
+                    using(SqlConnection con = Connections.GetConnection())
                     {
                         string strInsert = $"UPDATE CurrentSemester " +
                             $"SET StartDate = '{((DateTime)startDate).ToString("yyyy-MM-dd")}', NumOfWeeks = {numOfWeeks} " +
