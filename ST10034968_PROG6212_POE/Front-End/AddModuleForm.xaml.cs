@@ -22,7 +22,6 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class AddModuleForm : Window
     {
-        SqlConnection con = Connections.GetConnection();
         public AddModuleForm()
         {
             InitializeComponent();
@@ -62,7 +61,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 else
                 {
                     //adding module to database
-                    addModule(modCode, modName, (int)numOfCredits, (double)classHrsPerWeek);
+                    addModuleToDB(modCode, modName, (int)numOfCredits, (double)classHrsPerWeek);
                 }
             }
             catch (FormatException fe)
@@ -75,11 +74,11 @@ namespace ST10034968_PROG6212_POE.Front_End
             }
         }
 
-        public void addModule(string modCode, string modName, int modCredits, double modClassHours)
+        public void addModuleToDB(string modCode, string modName, int modCredits, double modClassHours)
         {
 
             Module m = null;
-            using (con)
+            using (SqlConnection con = Connections.GetConnection())
             {
                 string strSelect = $"SELECT * FROM Module WHERE ModCode = '{modCode}'";
                 con.Open();
@@ -89,6 +88,9 @@ namespace ST10034968_PROG6212_POE.Front_End
                     //checking if module exists (using module code) to register student for
                     if (r.Read())
                     {
+                        //checking if student has already registered for this module, if they have notify them they will see a duplicate module
+                        string strSelect = $"SELECT * FROM ";
+                        //displaying 
                         m = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
                         MessageBoxResult confirmModuleInsertion = MessageBox.Show("Another module with this code already exists (information below). By clicking yes, you agree to the information already stored under this module code to be used rather than the information you have entered." +
                             $"\nModule Code: {m.Code}" +

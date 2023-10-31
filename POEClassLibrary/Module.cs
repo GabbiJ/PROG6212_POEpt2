@@ -44,7 +44,7 @@ namespace POEClassLibrary
             DateTime lastMondayDate = (DateTime.Now.AddDays(-daysSinceLastMonday));
             //adding all self study hours since last monday to a list using a LINQ query
             double totalSelfStudyHrsThisWeek = (from st in CurrentSemester.selfStudyCompleted
-                                                where st.DateCompleted >= lastMondayDate.Date && st.DateCompleted <= DateTime.Now && st.Module.Equals( this.Name) 
+                                                where st.DateCompleted >= lastMondayDate.Date && st.DateCompleted <= DateTime.Now && st.ModCode.Equals( this.Code) 
                                                 select st.NumOfHours).ToList().Sum();
             return result -= totalSelfStudyHrsThisWeek;
         }

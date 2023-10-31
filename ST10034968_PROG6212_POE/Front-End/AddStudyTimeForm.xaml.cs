@@ -1,6 +1,7 @@
 ﻿using POEClassLibrary;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,7 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class AddStudyTimeForm : Window
     {
+        static SqlConnection con = Connections.GetConnection();
         public AddStudyTimeForm()
         {
             InitializeComponent();
@@ -34,7 +36,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 //making temporary variables to assign inputted values to
                 DateTime? dateCom = dpDateCompleted.SelectedDate;
                 double? hrsStudied = Convert.ToDouble(txbHours.Text);
-                string mod = cmbModules.Text;
+                string modName = cmbModules.Text;
                 if (dateCom == null)
                 {
                     throw new Exception("Please select the date the studying was completed.");
@@ -52,9 +54,17 @@ namespace ST10034968_PROG6212_POE.Front_End
                     }
                     else
                     {
-                        //adding values to StudyTime list in CurrentSemester class
-                        CurrentSemester.selfStudyCompleted.Add(new StudyTime((DateTime)dateCom, (double)hrsStudied, mod));
-                        this.Close();
+                        //retrieving module code based on module name from modules stored in memory
+                        string modCode = "";
+                        foreach (Module m in CurrentSemester.modules)
+                        {
+                            if(modName.Equals(m.Name))
+                            {
+                                modCode = m.Code;
+                            }
+                        }
+                        //adding values to database
+                        addStudyTimeToDB((DateTime)dateCom, (double)hrsStudied, modCode);
                     }                 
                 }
             }
@@ -74,6 +84,18 @@ namespace ST10034968_PROG6212_POE.Front_End
             {
                 cmbModules.Items.Add(m.Name);
             }
+        }
+
+        public void addStudyTimeToDB(DateTime DateCompleted, double numOfHours, string modName)
+        {
+            using (SqlConnection con2 = Connections.GetConnection())
+            {
+                string strInsert = $"INSERT INTO StudyTime VALUES('{DateCompleted.ToString("yyyy-MM-dd")}', {numOfHours}, '{modName}', {CurrentSemester.ID})";
+                con2.Open();
+                SqlCommand cmdInsert = new SqlCommand(strInsert, con2);
+                cmdInsert.ExecuteNonQuery();
+            }
+            this.Close();
         }
     }
 }

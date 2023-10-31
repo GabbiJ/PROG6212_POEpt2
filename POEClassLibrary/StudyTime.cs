@@ -13,19 +13,19 @@ namespace POEClassLibrary
     {
         public DateTime DateCompleted { get; set; }
         public double NumOfHours { get; set; }
-        public string Module { get; set; }
+        public string ModCode { get; set; }
 
         /// <summary>
         /// Constructor that assignes data to all StudyTime properties 
         /// </summary>
         /// <param name="dateCompleted">The date the study time was completed</param>
         /// <param name="numOfHours">The number of hours studied</param>
-        /// <param name="module">The name of the module studied</param>
-        public StudyTime(DateTime dateCompleted, double numOfHours, string module)
+        /// <param name="moduleCode">The module code of the module studied</param>
+        public StudyTime(DateTime dateCompleted, double numOfHours, string moduleCode)
         {
             DateCompleted = dateCompleted;
             NumOfHours = numOfHours;
-            Module = module;
+            ModCode = moduleCode;
         }
     }
 }

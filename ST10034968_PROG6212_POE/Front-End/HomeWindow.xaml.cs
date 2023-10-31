@@ -110,12 +110,12 @@ namespace ST10034968_PROG6212_POE.Front_End
 
         private void loadCurrentSemester()
         {
-            using (con)
+            using (SqlConnection con2 = Connections.GetConnection())
             {
                 //loading current semester information from database
                 string strSelect = $"SELECT * FROM CurrentSemester;";
-                con.Open();
-                SqlCommand cmdSelect = new SqlCommand(strSelect, con);
+                con2.Open();
+                SqlCommand cmdSelect = new SqlCommand(strSelect, con2);
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
                     if(r.Read())
@@ -129,7 +129,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 strSelect = $"SELECT * FROM Module " +
                     $"JOIN RegisterModule ON Module.ModCode = RegisterModule.ModCode " +
                     $"WHERE CurrentSemesterID = '{CurrentSemester.ID}';";
-                cmdSelect = new SqlCommand(strSelect, con);
+                cmdSelect = new SqlCommand(strSelect, con2);
                 //list to temporarily store modules
                 List<Module> tempModList = new List<Module>();
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
@@ -145,7 +145,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 //loading all study time from the database
                 strSelect = $"SELECT * FROM StudyTime " +
                     $"WHERE CurrentSemesterID = '{CurrentSemester.ID}'";
-                cmdSelect = new SqlCommand(strSelect, con);
+                cmdSelect = new SqlCommand(strSelect, con2);
                 //making temporary list to store study time  
                 List<StudyTime> tempStList = new List<StudyTime>();
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
