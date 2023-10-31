@@ -104,6 +104,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// <param name="e"></param>
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
+            loadCurrentSemester();
             displayDataToListView();
         }
 
@@ -125,10 +126,9 @@ namespace ST10034968_PROG6212_POE.Front_End
                     }
                 }
                 //loading all modules from the database
-                strSelect = $"SELECT * FROM RegisterModule " +
-                    $"JOIN Module ON RegisterModule.ModCode = Module.ModCode " +
-                    $"JOIN CurrentSemester ON RegisterModule.CurrentSemesterID = CurrentSemester.CurrentSemesterID " +
-                    $"WHERE CurrentSemester.Username = '{CurrentSemester.user}';";
+                strSelect = $"SELECT * FROM Module " +
+                    $"JOIN RegisterModule ON Module.ModCode = RegisterModule.ModCode " +
+                    $"WHERE CurrentSemesterID = '{CurrentSemester.ID}';";
                 cmdSelect = new SqlCommand(strSelect, con);
                 //list to temporarily store modules
                 List<Module> tempModList = new List<Module>();
@@ -144,8 +144,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 CurrentSemester.modules = tempModList;
                 //loading all study time from the database
                 strSelect = $"SELECT * FROM StudyTime " +
-                    $"JOIN CurrentSemester ON StudyTime.CurrentSemesterID = CurrentSemester.CurrentSemesterID " +
-                    $"WHERE Username = '{CurrentSemester.user}'";
+                    $"WHERE CurrentSemesterID = '{CurrentSemester.ID}'";
                 cmdSelect = new SqlCommand(strSelect, con);
                 //making temporary list to store study time  
                 List<StudyTime> tempStList = new List<StudyTime>();

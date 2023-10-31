@@ -24,7 +24,6 @@ namespace ST10034968_PROG6212_POE.Front_End
     public partial class LoginForm : Window
     {
         SqlConnection con = Connections.GetConnection();
-        SqlConnection con2 = Connections.GetConnection();
         public LoginForm()
         {
             InitializeComponent();
@@ -39,12 +38,12 @@ namespace ST10034968_PROG6212_POE.Front_End
                 if (Login(txbUsername.Text, pbPassword.Password))
                 {
                     //storing user data in memory
-                    using (con2)
+                    using (con)
                     {
                         //fetching user from the database that matches the inputted username
                         string strSelect = $"SELECT * FROM Student WHERE Username = '{txbUsername.Text}';";
-                        con2.Open();
-                        SqlCommand cmdSelect = new SqlCommand(strSelect, con2);
+                        con.Open();
+                        SqlCommand cmdSelect = new SqlCommand(strSelect, con);
                         using (SqlDataReader r = cmdSelect.ExecuteReader())
                         {
                             while (r.Read())
@@ -83,12 +82,12 @@ namespace ST10034968_PROG6212_POE.Front_End
             string hashedPass = hashString(pass);
             //seeing if any users match the credentials
             Student? fetchedStudent = null;
-            using (con)
+            using (SqlConnection con2 = Connections.GetConnection())
             {
                 //fetching user from the database that matches the inputted username
                 string strSelect = $"SELECT * FROM Student WHERE Username = '{username}';";
-                con.Open();
-                SqlCommand cmdSelect = new SqlCommand(strSelect, con);
+                con2.Open();
+                SqlCommand cmdSelect = new SqlCommand(strSelect, con2);
                 //creating student object out of fetched data
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
