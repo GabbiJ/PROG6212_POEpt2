@@ -42,7 +42,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                     //creating a row in current semester entity for student
                     strInsert = $"INSERT INTO CurrentSemester VALUES(NULL, NULL, '{username}');";
                     cmdInsert = new SqlCommand(strInsert, con2);
-                    cmdInsert.ExecuteNonQueryAsync();
+                    await cmdInsert.ExecuteNonQueryAsync();
                 }
             }
             catch (Exception ex)
