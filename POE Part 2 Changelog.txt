@@ -1,0 +1,13 @@
+Version: v2.0.0 (03-11-2023)(POE Part 2 Due Date)
+
+- Added Login and Registration functionality
+- Added user account system in which each user has their own account with all their modules and semester details stored permanently
+- Added data persistence with a Azure SQL database
+- Added multithreading to methods that interact with the database
+- No additional changes were implemented due to getting 100% on part 1
+
+Version: v1.0.0 (22-09-2023)(POE Part 1 Due Date)
+
+- All semester information, modules and study time can be added, stored in memory, and displayed to the user
+- LINQ queries were used to fetch various data in the application
+- WPF (.NET core) was used for the GUI elements of the application
