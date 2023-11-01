@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace POEClassLibrary
 {
     /// <summary>
-    /// Static class that stores all data for the current semester
+    /// Static class that stores all data for the current semester in memory
     /// </summary>
     public static class CurrentSemester
     {

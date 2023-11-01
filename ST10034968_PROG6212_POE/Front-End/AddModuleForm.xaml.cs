@@ -27,7 +27,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             InitializeComponent();
         }
         /// <summary>
-        /// Method that captures data and uses it to add a module to the modules list in the CurrentSemester class when the "Add" button is clicked
+        /// Method that captures data and uses it to add a module to database when the "Add" button is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -36,7 +36,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             //adding modules to database
             try
             {
-                //storing the values in temporary variables
+                //declaring temporary variables to store the values inputted
                 string? modName = txbModName.Text;
                 string? modCode = txbModCode.Text;
                 int? numOfCredits = Convert.ToInt32(txbNumOfCredits.Text);
@@ -73,7 +73,13 @@ namespace ST10034968_PROG6212_POE.Front_End
                 lblError.Content = ex.Message;
             }
         }
-
+        /// <summary>
+        /// Method that handles adding the modules to the database
+        /// </summary>
+        /// <param name="modCode"></param>
+        /// <param name="modName"></param>
+        /// <param name="modCredits"></param>
+        /// <param name="modClassHours"></param>
         public async void addModuleToDB(string modCode, string modName, int modCredits, double modClassHours)
         {
             //checking if student currently has same module then warning them if they proceed there will be a duplicate

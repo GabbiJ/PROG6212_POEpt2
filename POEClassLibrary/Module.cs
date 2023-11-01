@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace POEClassLibrary
 {
     /// <summary>
-    /// class that would store information about a given module
+    /// class that stores information about a given module
     /// </summary>
     public class Module
     {
@@ -53,6 +53,5 @@ namespace POEClassLibrary
         /// </summary>
         /// <returns> The amount of self study hours the module has</returns>
         public double selfStudyPerWeek() => ((double)(this.NumOfCredits * 10) / (int)CurrentSemester.NumOfWeeks) - this.ClassHoursPerWeek;
-
     }
 }

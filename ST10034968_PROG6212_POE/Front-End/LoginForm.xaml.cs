@@ -23,12 +23,15 @@ namespace ST10034968_PROG6212_POE.Front_End
     /// </summary>
     public partial class LoginForm : Window
     {
-        SqlConnection con = Connections.GetConnection();
         public LoginForm()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Logic for when the Login button is pressed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -41,8 +44,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 //checking if login credentials are correct then if correct the user is stored in memeory
                 if (await Login(txbUsername.Text, pbPassword.Password))
                 {
-                    //storing user data in memory
-                    using (con)
+                    using (SqlConnection con = Connections.GetConnection())
                     {
                         //fetching user from the database that matches the inputted username
                         string strSelect = $"SELECT * FROM Student WHERE Username = '{txbUsername.Text}';";
@@ -52,6 +54,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                         {
                             while (await r.ReadAsync())
                             {
+                                //storing user data in memory
                                 CurrentSemester.user = new Student(r.GetString(0), r.GetString(1));
                             }
                         }
@@ -71,15 +74,25 @@ namespace ST10034968_PROG6212_POE.Front_End
                 lblError.Content = ex.Message;
             }
         }
-
+        /// <summary>
+        /// Logic for when the hyperlink is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HyperlinkHere_Click(object sender, RoutedEventArgs e)
         {
+            //opening register form and closing current window
             RegisterForm rf = new RegisterForm();
             rf.Show();
             this.Close();
             e.Handled = true;
         }
-
+        /// <summary>
+        /// Checks the validity of the username and password inputted
+        /// </summary>
+        /// <param name="username">Username</param>
+        /// <param name="pass">Student's password</param>
+        /// <returns></returns>
         public async Task<bool> Login(string username, string pass)
         {
             //hashing inputted password 
@@ -92,7 +105,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 string strSelect = $"SELECT * FROM Student WHERE Username = '{username}';";
                 await con2.OpenAsync();
                 SqlCommand cmdSelect = new SqlCommand(strSelect, con2);
-                //creating student object out of fetched data
+                //assigning student object out of fetched data
                 using (SqlDataReader r = cmdSelect.ExecuteReader())
                 {
                     while (await r.ReadAsync())
@@ -116,7 +129,11 @@ namespace ST10034968_PROG6212_POE.Front_End
             }
         }
 
-
+        /// <summary>
+        /// Takes a string and outputs the hash string of the input string
+        /// </summary>
+        /// <param name="rawText">Input string</param>
+        /// <returns>Hashed string</returns>
         public string hashString(string rawText)
         {
             string salt = "HU958lew8439i";

@@ -29,6 +29,7 @@ namespace ST10034968_PROG6212_POE.Front_End
         public HomeWindow()
         {
             InitializeComponent();
+            //fetching relevant data from the database and stores it in memory
             loadCurrentSemester();
             //displaying all modules in list view object
             displayDataToListView();
@@ -103,10 +104,14 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// <param name="e"></param>
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
+            //reloading data from database to memory
             loadCurrentSemester();
+            //displaying updated data in memory
             displayDataToListView();
         }
-
+        /// <summary>
+        /// Method that fetches data from the database and stores it in memory
+        /// </summary>
         private async void loadCurrentSemester()
         {
             using (SqlConnection con = Connections.GetConnection())
@@ -125,7 +130,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                         {
                             CurrentSemester.StartDate = r.GetDateTime(1);
                             CurrentSemester.NumOfWeeks = r.GetInt32(2);
-                            //assign values for duration and start date of semester
+                            //assign values for duration and start date of semester to relevant labels
                             lblStartDate.Content = $"Start Date: {(CurrentSemester.StartDate).Day.ToString()} {(CurrentSemester.StartDate).ToString("MMMM")} {(CurrentSemester.StartDate).Year.ToString()}";
                             lblDuration.Content = $"Duration: {CurrentSemester.NumOfWeeks} weeks";
                         }

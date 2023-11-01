@@ -27,16 +27,20 @@ namespace ST10034968_PROG6212_POE.Front_End
             InitializeComponent();
             addItemsToCmb();
         }
-
+        /// <summary>
+        /// Adds a study time to the database when the "Add" button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            //taking values inputted and adding them to studyTime array
             try
             {
                 //making temporary variables to assign inputted values to
                 DateTime? dateCom = dpDateCompleted.SelectedDate;
                 double? hrsStudied = Convert.ToDouble(txbHours.Text);
                 string modName = cmbModules.Text;
+                //checking data entered is valid
                 if (dateCom == null)
                 {
                     throw new Exception("Please select the date the studying was completed.");
@@ -77,7 +81,9 @@ namespace ST10034968_PROG6212_POE.Front_End
                 lblError.Content = ex.Message;
             }
         }
-
+        /// <summary>
+        /// This method adds all modules from memory to the combo box
+        /// </summary>
         public void addItemsToCmb()
         {
             foreach (Module m in CurrentSemester.modules)
@@ -85,12 +91,17 @@ namespace ST10034968_PROG6212_POE.Front_End
                 cmbModules.Items.Add(m.Name);
             }
         }
-
-        public async void addStudyTimeToDB(DateTime DateCompleted, double numOfHours, string modName)
+        /// <summary>
+        /// Adds StudyTime to the database
+        /// </summary>
+        /// <param name="DateCompleted"> Date studying was completed</param>
+        /// <param name="numOfHours">Number of hours studied</param>
+        /// <param name="modCode">Module code</param>
+        public async void addStudyTimeToDB(DateTime DateCompleted, double numOfHours, string modCode)
         {
             using (SqlConnection con = Connections.GetConnection())
             {
-                string strInsert = $"INSERT INTO StudyTime VALUES('{DateCompleted.ToString("yyyy-MM-dd")}', {numOfHours.ToString("F2", CultureInfo.GetCultureInfo("en-US"))}, '{modName}', {CurrentSemester.ID})";
+                string strInsert = $"INSERT INTO StudyTime VALUES('{DateCompleted.ToString("yyyy-MM-dd")}', {numOfHours.ToString("F2", CultureInfo.GetCultureInfo("en-US"))}, '{modCode}', {CurrentSemester.ID})";
                 await con.OpenAsync();
                 SqlCommand cmdInsert = new SqlCommand(strInsert, con);
                 await cmdInsert.ExecuteNonQueryAsync();

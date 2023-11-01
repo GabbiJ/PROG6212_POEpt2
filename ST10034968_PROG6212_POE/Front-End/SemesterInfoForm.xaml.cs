@@ -30,7 +30,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             InitializeComponent();
         }
         /// <summary>
-        /// Method that captures the data entered in the window and stores it in CurrentSemester class when the "Add" button is clicked
+        /// Method that captures the data entered in the window and stores it in the database when the "Add" button is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

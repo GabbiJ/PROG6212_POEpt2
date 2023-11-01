@@ -25,54 +25,16 @@ namespace ST10034968_PROG6212_POE.Front_End
         {
             InitializeComponent();
         }
-
-        public async void registerStudent(string username, string pass)
-        { 
-            try
-            {
-                //hashing password
-                string hashedPass = hashString(pass);
-                //inserting student data into database
-                using (SqlConnection con2 = Connections.GetConnection())
-                {
-                    string strInsert = $"INSERT INTO Student VALUES('{username}', '{hashedPass}');";
-                    await con2.OpenAsync();
-                    SqlCommand cmdInsert = new SqlCommand(strInsert, con2);
-                    await cmdInsert.ExecuteNonQueryAsync();
-                    //creating a row in current semester entity for student
-                    strInsert = $"INSERT INTO CurrentSemester VALUES(NULL, NULL, '{username}');";
-                    cmdInsert = new SqlCommand(strInsert, con2);
-                    await cmdInsert.ExecuteNonQueryAsync();
-                }
-            }
-            catch (Exception ex)
-            {
-                lblError.Content = ex.Message;
-            }
-        }
-
-        public string hashString(string rawText)
-        {
-            string salt = "HU958lew8439i";
-            //the methods used to hash the password were done using methods found on https://www.sean-lloyd.com/post/hash-a-string/
-            using (var sha = new System.Security.Cryptography.SHA256Managed())
-            {
-                //converting string to byte array
-                byte[] textBytes = System.Text.Encoding.UTF8.GetBytes(rawText + salt);
-                byte[] hashBytes = sha.ComputeHash(textBytes);
-
-                //converting from byte to string
-                string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
-
-                return hash;
-            }
-        }
-
+        /// <summary>
+        /// Registers student when the "Register" button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                //checking all fields have valid
+                //checking all fields have valid values
                 if (txbUsername.Text == "" || pbPassword.Password == "")
                 {
                     throw new Exception("Please enter a username and password.");
@@ -93,6 +55,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                         }
                     }
                 }
+                //registers user if username is not taken
                 if (s == null)
                 {
                     registerStudent(txbUsername.Text, pbPassword.Password);
@@ -108,6 +71,59 @@ namespace ST10034968_PROG6212_POE.Front_End
             catch (Exception ex)
             {
                 lblError.Content = ex.Message;
+            }
+        }
+
+        /// <summary>
+        /// Method that adds a student to the database and creates a current semester entry in the database for them
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="pass"></param>
+        public async void registerStudent(string username, string pass)
+        {
+            try
+            {
+                //hashing password
+                string hashedPass = hashString(pass);
+                //inserting student data into database
+                using (SqlConnection con2 = Connections.GetConnection())
+                {
+                    //entering student into the database
+                    string strInsert = $"INSERT INTO Student VALUES('{username}', '{hashedPass}');";
+                    await con2.OpenAsync();
+                    SqlCommand cmdInsert = new SqlCommand(strInsert, con2);
+                    await cmdInsert.ExecuteNonQueryAsync();
+                    //creating a row in current semester table for student
+                    strInsert = $"INSERT INTO CurrentSemester VALUES(NULL, NULL, '{username}');";
+                    cmdInsert = new SqlCommand(strInsert, con2);
+                    await cmdInsert.ExecuteNonQueryAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                lblError.Content = ex.Message;
+            }
+        }
+
+        /// <summary>
+        /// Takes a string and outputs the hash string of the input string
+        /// </summary>
+        /// <param name="rawText">Input string</param>
+        /// <returns>Hashed string</returns>
+        public string hashString(string rawText)
+        {
+            string salt = "HU958lew8439i";
+            //the methods used to hash the password were done using methods found on https://www.sean-lloyd.com/post/hash-a-string/
+            using (var sha = new System.Security.Cryptography.SHA256Managed())
+            {
+                //converting string to byte array
+                byte[] textBytes = System.Text.Encoding.UTF8.GetBytes(rawText + salt);
+                byte[] hashBytes = sha.ComputeHash(textBytes);
+
+                //converting from byte to string
+                string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
+
+                return hash;
             }
         }
     }

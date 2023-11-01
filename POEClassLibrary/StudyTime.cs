@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace POEClassLibrary
 {
     /// <summary>
-    /// Class that stores an individual study time sessions information
+    /// Class that stores an individual study time session's information
     /// </summary>
     public class StudyTime
     {

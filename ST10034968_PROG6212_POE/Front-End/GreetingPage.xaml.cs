@@ -24,7 +24,7 @@ namespace ST10034968_PROG6212_POE.Front_End
             InitializeComponent();
         }
         /// <summary>
-        /// method that opens a new SemesterInfoForm window and closes the current window when the "Let's Begin" button is clicked
+        /// Method that transfers user to Login form when the Login button is clicked
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -34,14 +34,16 @@ namespace ST10034968_PROG6212_POE.Front_End
             lf.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// Method that transfers user to Register form when the Resister button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
             RegisterForm rf = new RegisterForm();
             rf.Show();
             this.Close();
         }
-
-
     }
 }
