@@ -114,70 +114,17 @@ namespace ST10034968_PROG6212_POE.Front_End
         /// </summary>
         private async void loadCurrentSemester()
         {
-            using (SqlConnection con = Connections.GetConnection())
-            {
-                //loading current semester information from database
-                string strSelect = $"SELECT * FROM CurrentSemester WHERE Username = '{CurrentSemester.user.Username}';";
-                await con.OpenAsync();
-                SqlCommand cmdSelect = new SqlCommand(strSelect, con);
-                using (SqlDataReader r = cmdSelect.ExecuteReader())
-                {
-                    if(await r.ReadAsync())
-                    {
-                        CurrentSemester.ID = r.GetInt32(0);
-                        //only assigning following values if they are present in the database
-                        if (r.IsDBNull(1) == false && r.IsDBNull(2) == false)
-                        {
-                            CurrentSemester.StartDate = r.GetDateTime(1);
-                            CurrentSemester.NumOfWeeks = r.GetInt32(2);
-                            //assign values for duration and start date of semester to relevant labels
-                            lblStartDate.Content = $"Start Date: {(CurrentSemester.StartDate).Day.ToString()} {(CurrentSemester.StartDate).ToString("MMMM")} {(CurrentSemester.StartDate).Year.ToString()}";
-                            lblDuration.Content = $"Duration: {CurrentSemester.NumOfWeeks} weeks";
-                        }
-                    }
-                    else
-                    {
-                        SemesterInfoForm semesterInfoForm = new SemesterInfoForm();
-                        semesterInfoForm.Show();
-                        this.Close();
-                    }
-                }
-                //loading all modules from the database
-                strSelect = $"SELECT * FROM Module " +
-                    $"JOIN RegisterModule ON Module.ModCode = RegisterModule.ModCode " +
-                    $"WHERE CurrentSemesterID = '{CurrentSemester.ID}';";
-                cmdSelect = new SqlCommand(strSelect, con);
-                //list to temporarily store modules
-                List<Module> tempModList = new List<Module>();
-                using (SqlDataReader r = cmdSelect.ExecuteReader())
-                {
-                    while (await r.ReadAsync())
-                    {
-                        Module tempMod = new Module(r.GetString(0), r.GetString(1), r.GetInt32(2), r.GetDouble(3));
-                        tempModList.Add(tempMod);
-                    }
-                }
-                //assigning temp list to list stored in current semester
-                CurrentSemester.modules = tempModList;
-                //loading all study time from the database
-                strSelect = $"SELECT * FROM StudyTime " +
-                    $"WHERE CurrentSemesterID = '{CurrentSemester.ID}'";
-                cmdSelect = new SqlCommand(strSelect, con);
-                //making temporary list to store study time  
-                List<StudyTime> tempStList = new List<StudyTime>();
-                using (SqlDataReader r = cmdSelect.ExecuteReader())
-                {
-                    while (await r.ReadAsync())
-                    {
-                        StudyTime tempSt = new StudyTime(r.GetDateTime(1), r.GetDouble(2), r.GetString(3));
-                        tempStList.Add(tempSt);
-                    }
-                }
-                //assigning temp study time list to list stored in current semester
-                CurrentSemester.selfStudyCompleted = tempStList;
-            }
+            //fetching CurrentSemester data from database
+            CurrentSemester.assignFromDB();
             //assign username value to title
-            lblTitle.Content = $"{CurrentSemester.user.Username}'s Current Semester" ;
+            lblTitle.Content = $"{CurrentSemester.user.Username}'s Current Semester";
+            //only load semester info if values are not null
+            if (CurrentSemester.StartDate != null && CurrentSemester.NumOfWeeks != null)
+            {
+                //assign values for duration and start date of semester to relevant labels
+                lblStartDate.Content = $"Start Date: {((DateTime)(CurrentSemester.StartDate)).Day.ToString()} {((DateTime)(CurrentSemester.StartDate)).ToString("MMMM")} {((DateTime)(CurrentSemester.StartDate)).Year.ToString()}";
+                lblDuration.Content = $"Duration: {CurrentSemester.NumOfWeeks} weeks";
+            }
         }
     }
 }

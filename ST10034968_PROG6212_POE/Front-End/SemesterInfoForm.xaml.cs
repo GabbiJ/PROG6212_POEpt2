@@ -52,15 +52,7 @@ namespace ST10034968_PROG6212_POE.Front_End
                 else
                 {
                     //entering info into the database
-                    using(SqlConnection con = Connections.GetConnection())
-                    {
-                        string strInsert = $"UPDATE CurrentSemester " +
-                            $"SET StartDate = '{((DateTime)startDate).ToString("yyyy-MM-dd")}', NumOfWeeks = {numOfWeeks} " +
-                            $"WHERE Username = '{CurrentSemester.user.Username}';";
-                        await con.OpenAsync();
-                        SqlCommand cmdInsert = new SqlCommand(strInsert, con);
-                        await cmdInsert.ExecuteNonQueryAsync();
-                    }
+                    CurrentSemester.updateDB(((DateTime)startDate).ToString("yyyy-MM-dd"), (int)numOfWeeks);
                     //going back to home window
                     HomeWindow hw = new HomeWindow();
                     hw.Show();
