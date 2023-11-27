@@ -21,19 +21,36 @@ namespace POEClassLibrary
         public static int? NumOfWeeks { get; set; }
         public static DateTime? StartDate { get; set; }
         public static Student user = new Student();
+        public static String[] plannedModules = new String[7];
 
         /// <summary>
         /// This method updates the CurrentSemester table in the database
         /// </summary>
         /// <param name="sDate">Semester Start Date</param>
         /// <param name="numOfWeeks">Number of Weeks</param>
-        public static async void updateDB(string sDate, int numOfWeeks)
+        public static async void updateDB(string sDate, int numOfWeeks, string[] plannedDays)
         {
             //Updating database with new info
             using (SqlConnection con = Connections.GetConnection())
             {
+                //converting all null values to "NULL" string so that they can be insterted into the database
+                for (int i = 0; i < plannedDays.Length; i++)
+                {
+                    if (plannedDays[i] == null)
+                    {
+                        plannedDays[i] = "NULL";
+                    }
+                }
                 string strInsert = $"UPDATE CurrentSemester " +
-                            $"SET StartDate = '{sDate}', NumOfWeeks = {numOfWeeks} " +
+                            $"SET StartDate = '{sDate}'," +
+                            $" NumOfWeeks = {numOfWeeks}," +
+                            $" Monday = '{plannedDays[0]}', " +
+                            $" Tuesday = '{plannedDays[1]}', " +
+                            $" Wednesday = '{plannedDays[2]}', " +
+                            $" Thursday = '{plannedDays[3]}', " +
+                            $" Friday = '{plannedDays[4]}', " +
+                            $" Saturday = '{plannedDays[5]}', " +
+                            $" Sunday = '{plannedDays[6]}' " +
                             $"WHERE Username = '{CurrentSemester.user.Username}';";
                 await con.OpenAsync();
                 SqlCommand cmdInsert = new SqlCommand(strInsert, con);
@@ -62,7 +79,15 @@ namespace POEClassLibrary
                             CurrentSemester.StartDate = r.GetDateTime(1);
                             CurrentSemester.NumOfWeeks = r.GetInt32(2);                           
                         }
+                        //assigning values for plannedModules array
+                        for (int i = 3; i < 10; i++)
+                        {
+
+                            CurrentSemester.plannedModules[i - 3] = r.GetString(i);
+
+                        }
                     }
+                    
                 }
                 //loading all modules from the database
                 strSelect = $"SELECT * FROM Module " +
@@ -96,7 +121,7 @@ namespace POEClassLibrary
                     }
                 }
                 //assigning temp study time list to list stored in current semester
-                CurrentSemester.selfStudyCompleted = tempStList;
+                CurrentSemester.selfStudyCompleted = tempStList; 
             }
         }
     }

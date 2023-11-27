@@ -31,6 +31,10 @@ namespace POEClassLibrary
             ClassHoursPerWeek = classHoursPerWeek;
         }
         /// <summary>
+        /// default constructor
+        /// </summary>
+        public Module() { }
+        /// <summary>
         /// Method that calculates the remaining hours of self study this module has left this week 
         /// </summary>
         /// <returns>The remaining hours left of self study this week for the module</returns>
