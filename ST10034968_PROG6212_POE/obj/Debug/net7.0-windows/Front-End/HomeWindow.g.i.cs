@@ -127,13 +127,13 @@ namespace ST10034968_PROG6212_POE.Front_End {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.11.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.5.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ST10034968_PROG6212_POE;component/front-end/homewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ST10034968_PROG6212_POE;V1.0.0.0;component/front-end/homewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Front-End\HomeWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -143,7 +143,7 @@ namespace ST10034968_PROG6212_POE.Front_End {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "7.0.11.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.5.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
