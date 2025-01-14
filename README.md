@@ -1,4 +1,7 @@
-﻿# PROG6212 POE Part 2
+
+ > **_NOTE:_**  This README file is copied from the original project thus previous parts of the project are referenced. This was kept in to demonstrate the feedback implementation in this project.
+
+ # PROG6212 POE Part 2
 
 This program is aimed to aid Lerato in her studies by allowing her to keep track of important information about her current semester. This program also allows other students to track their semester information using an account system.
 
@@ -56,8 +59,4 @@ The current semester information can be changed at any time.
 	* The data is stored on Microsoft Azure and thus the user can still access the same data used for the application across different machines.
 # Changes Made according to POE Part 1 Feedback
 I achieved a mark of 100% for my POE part 1 and hence no suggestions were given for the application and thus no amendments were made to the code used for the POE Part 1. 
-# Link to My POE Part 1 GitHub Repository
-[Part 1 GitHub Repository](https://github.com/VCSTDN/prog6212-part-1-ST10034968)
-# Link to My POE Part 2 GitHub Repository
-[Part 2 GitHub Repository](https://github.com/VCSTDN/prog6212-poe-part2-ST10034968.git)
 
